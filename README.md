@@ -4,7 +4,7 @@ A single-page profile/portfolio site for Hillary Atindah George — STEM, EdTech
 based in Nanyuki, Laikipia County, Kenya — built from his LinkedIn profile and resume, and designed to
 be shared with recruiters, funders and collaborators.
 
-**Live site:** https://hillary-atis.github.io/my-profile-/
+**Live site:** https://atindahhillary.github.io/my-profile-/
 
 No build step, no dependencies, no framework — plain HTML, CSS and JavaScript.
 
@@ -26,7 +26,7 @@ list ever gets unwieldy, move the media into `assets/img/` and update the `src` 
 ## Preview locally
 
 ```bash
-git clone https://github.com/Hillary-atis/my-profile-.git
+git clone https://github.com/atindahhillary/my-profile-.git
 cd my-profile-
 python3 -m http.server 8080
 # open http://localhost:8080
@@ -67,7 +67,7 @@ the layout, and about 1 MB for every image on the page combined.
 ## Built-in behaviour worth knowing
 
 - **Social previews** — Open Graph and Twitter Card tags in `<head>` control how links look when shared
-  on LinkedIn, WhatsApp or X. They point at absolute `https://hillary-atis.github.io/my-profile-/` URLs,
+  on LinkedIn, WhatsApp or X. They point at absolute `https://atindahhillary.github.io/my-profile-/` URLs,
   so update them if the site ever moves to a custom domain.
 - **Structured data** — a `schema.org/Person` JSON-LD block helps search engines identify the profile.
 - **Accessibility** — skip link, keyboard focus outlines, labelled mobile nav, and full
