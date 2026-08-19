@@ -914,3 +914,25 @@ main:focus,
   aspect-ratio: 16 / 10;
   object-position: center 32%;
 }
+
+/* ---------- Photo captions ---------- */
+
+.photo-caption {
+  margin-top: 12px;
+  padding: 10px 2px 0 12px;
+  border-left: 3px solid var(--amber);
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.photo-caption-inset { margin: 14px 22px 0; }
+.about-photo-figure,
+.cert-banner-figure { margin: 0; }
+.cert-banner-figure { margin-bottom: 32px; }
+.cert-banner-figure .cert-banner { margin-bottom: 0; }
+.tl-inline-media { margin: 0 0 20px; }
+.tl-inline-media .photo-caption { margin-top: 10px; }
+/* the inline figure now wraps a caption, so round the image not the wrapper */
+.tl-inline-media { overflow: visible; border-radius: 0; }
+.tl-inline-media img { border-radius: 12px; }
