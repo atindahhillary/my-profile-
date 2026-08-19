@@ -975,3 +975,21 @@ main:focus,
 @media (min-width: 721px) {
   .title-clause { white-space: nowrap; }
 }
+
+/* ---------- Brand tile used as a card cover (LinkedIn) ---------- */
+
+.achieve-media-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a66c2;
+  transition: background 0.2s ease;
+}
+.achieve-media-brand svg {
+  width: 74px;
+  height: 74px;
+  fill: #ffffff;
+}
+.achieve-media-brand:hover { background: #08528f; }
+.achieve-media-brand:focus-visible { outline-offset: -4px; }
+.achieve-card .card-link { margin-top: 12px; }
