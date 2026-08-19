@@ -1,7 +1,7 @@
 # Hillary Atindah George: Profile Website
 
 A single-page profile/portfolio site for Hillary Atindah George, STEM, EdTech & Digital Skills Leader
-based in Nanyuki, Laikipia County, Kenya. Built from his LinkedIn profile and resume, and designed to
+based in Nairobi, Kenya. Built from his LinkedIn profile and resume, and designed to
 be shared with recruiters, funders and collaborators.
 
 **Live site:** https://atindahhillary.github.io/my-profile-/
