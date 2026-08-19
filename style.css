@@ -902,3 +902,9 @@ main:focus,
   .eyebrow-hook { font-size: 0.9rem; padding-left: 0; }
   .eyebrow-hook::before { display: none; }
 }
+
+/* Hero summary proof points */
+.hero-summary strong {
+  color: var(--white);
+  font-weight: 700;
+}

@@ -1,6 +1,6 @@
 # Hillary Atindah George: Profile Website
 
-A single-page profile/portfolio site for Hillary Atindah George, STEM, EdTech & Digital Skills Leader
+A single-page profile/portfolio site for Hillary Atindah George, STEM, EdTech & Digital Transformation Leader
 based in Nairobi, Kenya. Built from his LinkedIn profile and resume, and designed to
 be shared with recruiters, funders and collaborators.
 
