@@ -1,0 +1,14 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Archives / build output — the site is served from source, no bundles needed
+*.zip
+*.tar.gz
+node_modules/
