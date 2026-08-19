@@ -936,3 +936,28 @@ main:focus,
 /* the inline figure now wraps a caption, so round the image not the wrapper */
 .tl-inline-media { overflow: visible; border-radius: 0; }
 .tl-inline-media img { border-radius: 12px; }
+
+/* ---------- Figures inside community cards and the STEM band ---------- */
+
+.community-figure { margin: 14px 0 4px; }
+.community-figure img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+.stem-figure { margin: 0 0 34px; }
+.stem-figure img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: var(--radius);
+  display: block;
+}
+/* captions sit on the dark STEM band, so lift their contrast */
+.stem-figure .photo-caption {
+  color: rgba(255, 255, 255, 0.78);
+  border-left-color: var(--amber);
+}
