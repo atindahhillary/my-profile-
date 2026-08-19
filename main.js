@@ -72,10 +72,70 @@
     });
   }
 
+  // Animated counters: run from zero to target over 3 seconds when scrolled into view
+  var COUNT_DURATION = 3000;
+  var counters = document.querySelectorAll('.count');
+
+  function formatCount(value, suffix) {
+    return value.toLocaleString('en-US') + suffix;
+  }
+
+  function runCounter(el) {
+    var target = parseFloat(el.getAttribute('data-target'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (isNaN(target)) return;
+
+    var start = null;
+
+    function step(timestamp) {
+      if (start === null) start = timestamp;
+      var elapsed = timestamp - start;
+      var progress = Math.min(elapsed / COUNT_DURATION, 1);
+      // ease-out so the number decelerates into its final value
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = formatCount(Math.round(target * eased), suffix);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        el.textContent = formatCount(target, suffix);
+      }
+    }
+
+    window.requestAnimationFrame(step);
+  }
+
+  if (counters.length) {
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      // leave the final values already present in the markup
+      counters.forEach(function (el) {
+        el.textContent = formatCount(parseFloat(el.getAttribute('data-target')), el.getAttribute('data-suffix') || '');
+      });
+    } else {
+      counters.forEach(function (el) {
+        el.textContent = formatCount(0, el.getAttribute('data-suffix') || '');
+      });
+
+      var countObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              runCounter(entry.target);
+              countObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+
+      counters.forEach(function (el) { countObserver.observe(el); });
+    }
+  }
+
   // Scroll reveal animations
   var revealTargets = document.querySelectorAll(
     '.skill-card, .tl-item, .achieve-card, .cert-item, .community-card, ' +
-    '.about-copy, .about-facts, .contact-cards, .impact-item, .chip-row'
+    '.about-copy, .about-facts, .contact-cards, .impact-item, .chip-row, ' +
+    '.stem-card, .work-card, .stem-stats li'
   );
 
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
