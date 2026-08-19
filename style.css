@@ -961,3 +961,11 @@ main:focus,
   color: rgba(255, 255, 255, 0.78);
   border-left-color: var(--amber);
 }
+
+/* Wide 21:9 banners get too short to read on phones, so open them up */
+@media (max-width: 720px) {
+  .tl-inline-media img,
+  .tl-inline-media.tl-inline-tall img,
+  .stem-figure img { aspect-ratio: 4 / 3; }
+  .community-figure img { aspect-ratio: 4 / 3; }
+}
