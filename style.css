@@ -908,3 +908,9 @@ main:focus,
   color: var(--white);
   font-weight: 700;
 }
+
+/* Taller crop for portrait-ish inline timeline photos */
+.tl-inline-media.tl-inline-tall img {
+  aspect-ratio: 16 / 10;
+  object-position: center 32%;
+}
