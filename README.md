@@ -1,8 +1,11 @@
 # Hillary Atindah George: Profile Website
 
-A single-page profile/portfolio site for Hillary Atindah George, STEM, EdTech & Digital Transformation Leader
+A multipage profile/portfolio site for Hillary Atindah George, STEM, EdTech & Digital Transformation Leader
 based in Nairobi, Kenya. Built from his LinkedIn profile and resume, and designed to
 be shared with recruiters, funders and collaborators.
+
+Each part of the profile is its own page, reachable from the menu bar on every page. The home page
+carries the hero, the impact band and a card per page.
 
 **Live site:** https://atindahhillary.github.io/my-profile-/
 
@@ -12,13 +15,43 @@ No build step, no dependencies, no framework. Plain HTML, CSS and JavaScript.
 
 ```
 .
-├── index.html      # All page content and sections
-├── style.css       # Design system: colour tokens, layout, responsive + print rules
-├── main.js         # Nav toggle, scroll progress bar, reveal animations
-├── 404.html        # Not-found page for GitHub Pages
-├── *.jpg           # Photography used across the page
+├── index.html          # Hero, impact band, and a card linking to each page
+├── about.html          # About
+├── skills.html         # Core competencies
+├── stem.html           # STEM leadership
+├── experience.html     # Professional journey
+├── achievements.html   # Achievements & recognition
+├── certifications.html # Certifications
+├── community.html      # Community leadership & advisory
+├── work.html           # Work with me (consultancy)
+├── contact.html        # Contact
+├── style.css           # Design system: colour tokens, layout, responsive + print rules
+├── main.js             # Nav toggle, scroll progress bar, counters, reveal animations
+├── 404.html            # Not-found page for GitHub Pages
+├── robots.txt          # Crawler directives + sitemap pointer
+├── sitemap.xml         # One entry per page
+├── *.jpg               # Photography used across the pages
 └── Hillary-Atindah-George-Resume.pdf   # Downloadable resume
 ```
+
+### Editing the menu bar
+
+There is no build step, so the header, footer navigation and the previous/next pager are **copied into
+every page**. Adding, renaming or reordering a menu item means editing the `<nav>` in all ten HTML
+files, plus `.footer-nav`, plus the pager links on the two neighbouring pages, plus `sitemap.xml`.
+That duplication is the price of keeping the site dependency-free; if the menu starts changing often,
+that is the point to introduce a small static generator rather than hand-editing ten files.
+
+### How a page is put together
+
+Every page carries `<body class="subpage">` except the home page. That class pins the header to its
+solid cream treatment, because the transparent state only works over the dark hero, which lives on the
+home page alone. The current page is marked with `aria-current="page"` on its menu link, which is what
+styles it as active, so screen readers and sighted users get the same signal.
+
+On a subpage the section title is the `<h1>`; the card headings inside it are `<h2>`. On the home page
+the hero is the `<h1>`, section titles are `<h2>` and cards are `<h3>`. The CSS accepts either level
+(`.skill-card h2, .skill-card h3`), so a section renders the same on whichever page it sits.
 
 Assets sit at the repository root because GitHub Pages serves this repo directly from `/`. If the file
 list ever gets unwieldy, move the media into `assets/img/` and update the `src` paths in `index.html`.
@@ -45,11 +78,14 @@ with no build command.
 
 ## Editing content
 
-All copy lives in `index.html`, organised by section: `#about`, `#skills`, `#stem`, `#experience`,
-`#achievements`, `#certifications`, `#community`, `#work`, `#contact`. The hero is followed by an impact
-band whose figures (learners, teachers, schools, cohort pass rate) are plain markup in the
-`.impact-grid` list. Update them there when the numbers move, and keep each `data-target` in sync with
-the visible text.
+Each page holds its own copy, so edit the file named after the section: `about.html`, `skills.html`,
+`stem.html`, `experience.html`, `achievements.html`, `certifications.html`, `community.html`,
+`work.html`, `contact.html`.
+
+`index.html` carries the hero, the impact band and the explore cards. The impact figures (learners,
+teachers, schools, cohort pass rate, girls mentored) are plain markup in the `.impact-grid` list.
+Update them there when the numbers move, and keep each `data-target` in sync with the visible text.
+The two hero stat chips repeat the learner and teacher figures, so they need the same edit.
 
 Colours, spacing and typography are CSS custom properties at the top of `style.css` (`--teal-800`,
 `--amber`, `--radius`, …). Change the palette there rather than hunting through individual rules.
