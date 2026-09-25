@@ -135,7 +135,7 @@
   var revealTargets = document.querySelectorAll(
     '.skill-card, .tl-item, .achieve-card, .cert-item, .community-card, ' +
     '.about-copy, .about-facts, .contact-cards, .impact-item, .chip-row, ' +
-    '.stem-card, .work-card, .stem-stats li'
+    '.stem-card, .work-card, .stem-stats li, .explore-card'
   );
 
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
