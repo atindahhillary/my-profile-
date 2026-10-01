@@ -63,7 +63,13 @@ It speaks about Hillary in the third person on purpose, and says plainly that it
 A visitor should never think they are messaging him directly.
 
 The panel opens itself once per browsing session, held by a `sessionStorage` flag, so arriving at the
-site pops it out but moving between the ten pages does not re-open it. `404.html` carries its own
+site pops it out but moving between the ten pages does not re-open it. It sits bottom **left**: the home
+hero puts the portrait on the right, so a panel in the right corner lands on his face.
+
+On the home page it waits for the hero to scroll mostly out of view before opening. That hero fills the
+viewport, with the portrait right and the headline, summary and both calls to action left, so a panel
+large enough to hold a conversation covers one or the other wherever it sits. Pages without a `.hero`
+open on a timer instead. The panel is translucent with a backdrop blur for the same reason. `404.html` carries its own
 inline styles and no `style.css`, so the widget is not wired in there.
 
 Giving it a real language model would mean putting a serverless function in front of an API key. The
