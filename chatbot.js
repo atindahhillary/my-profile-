@@ -3,6 +3,9 @@
  * A self-contained profile assistant for the site. It injects its own markup,
  * so a page only needs <script src="chatbot.js" defer></script>.
  *
+ * It opens only when the launcher is clicked. Nothing auto-opens, so the panel
+ * never lands on the hero portrait or the calls to action beneath it.
+ *
  * It answers from the knowledge base below by keyword scoring. There is no
  * model call and no API key: this site is static, served from GitHub Pages and
  * Vercel with no backend, and any key shipped to the browser would be public.
@@ -350,43 +353,10 @@
     });
   }
 
-  function autoOpen() {
-    // Pops out on arrival, but once per browsing session: re-opening it on
-    // every page of a ten-page site would be hostile.
-    var KEY = 'atindlet-bot-greeted';
-    var seen;
-    try { seen = window.sessionStorage.getItem(KEY); } catch (err) { seen = '1'; }
-    if (seen) return;
-
-    function pop() {
-      if (open) return;
-      try { window.sessionStorage.setItem(KEY, '1'); } catch (err) { /* private mode */ }
-      setOpen(true);
-    }
-
-    // The home page hero fills the viewport: the portrait on the right, the
-    // headline, summary and both calls to action on the left. A panel big
-    // enough to hold a conversation covers one or the other wherever it sits,
-    // and burying "Let's work together" is the worst of those options. So on
-    // the hero page it waits until the hero is mostly scrolled past, then
-    // pops. Every other page opens on the timer, nothing there to block.
-    var hero = document.querySelector('.hero');
-    if (!hero || !('IntersectionObserver' in window)) {
-      window.setTimeout(pop, 1400);
-      return;
-    }
-
-    var io = new IntersectionObserver(function (entries) {
-      if (entries[0].intersectionRatio < 0.4) { io.disconnect(); pop(); }
-    }, { threshold: [0, 0.4, 1] });
-    io.observe(hero);
-  }
-
   function init() {
     if (document.querySelector('.abot')) return;
     build();
     wire();
-    autoOpen();
   }
 
   if (document.readyState === 'loading') {

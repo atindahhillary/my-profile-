@@ -809,6 +809,10 @@ body.subpage .site-header:not(.scrolled) .nav a.nav-cta { color: var(--teal-900)
 .abot-open .abot-launcher-text { display: none; }
 .abot-open .abot-launcher { padding: 12px; }
 
+/* An author `display` beats the user-agent [hidden] rule, so the panel kept
+   rendering as an empty shell while closed. This puts it back. */
+.abot-panel[hidden] { display: none; }
+
 .abot-panel {
   width: min(340px, calc(100vw - 40px));
   max-height: min(62vh, 480px);
