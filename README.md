@@ -27,6 +27,7 @@ No build step, no dependencies, no framework. Plain HTML, CSS and JavaScript.
 ├── contact.html        # Contact
 ├── style.css           # Design system: colour tokens, layout, responsive + print rules
 ├── main.js             # Nav toggle, scroll progress bar, counters, reveal animations
+├── chatbot.js          # ATINDLET BOT: the profile assistant widget
 ├── 404.html            # Not-found page for GitHub Pages
 ├── robots.txt          # Crawler directives + sitemap pointer
 ├── sitemap.xml         # One entry per page
@@ -41,6 +42,32 @@ every page**. Adding, renaming or reordering a menu item means editing the `<nav
 files, plus `.footer-nav`, plus the pager links on the two neighbouring pages, plus `sitemap.xml`.
 That duplication is the price of keeping the site dependency-free; if the menu starts changing often,
 that is the point to introduce a small static generator rather than hand-editing ten files.
+
+### ATINDLET BOT
+
+`chatbot.js` injects its own markup, so a page only needs
+`<script src="chatbot.js" defer></script>` next to `main.js`. Styling lives in `style.css` under the
+`.abot` prefix and is built from the site's existing tokens.
+
+**It has no model behind it, by design.** This site is static, served from GitHub Pages and Vercel with
+no backend. Any API key shipped to the browser would be readable by every visitor, so the bot answers
+from a fixed knowledge base in `chatbot.js` by keyword and regex scoring. Every answer is lifted from
+what the pages already say, which means the bot cannot invent a claim the site does not make, and
+unmatched questions fall back to "I don't have that one" plus the contact address rather than guessing.
+
+To add or change an answer, edit the `KB` array: each entry has `keys` (substrings to match), an
+optional `re` for phrasings keywords cannot catch, the `reply`, an optional `link`, and the `chips` to
+offer next. Keep replies traceable to something on a page.
+
+It speaks about Hillary in the third person on purpose, and says plainly that it is not him if asked.
+A visitor should never think they are messaging him directly.
+
+The panel opens itself once per browsing session, held by a `sessionStorage` flag, so arriving at the
+site pops it out but moving between the ten pages does not re-open it. `404.html` carries its own
+inline styles and no `style.css`, so the widget is not wired in there.
+
+Giving it a real language model would mean putting a serverless function in front of an API key. The
+Vercel project already connected to this repo is the natural place for that.
 
 ### How a page is put together
 
