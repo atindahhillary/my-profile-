@@ -62,14 +62,12 @@ offer next. Keep replies traceable to something on a page.
 It speaks about Hillary in the third person on purpose, and says plainly that it is not him if asked.
 A visitor should never think they are messaging him directly.
 
-The panel opens itself once per browsing session, held by a `sessionStorage` flag, so arriving at the
-site pops it out but moving between the ten pages does not re-open it. It sits bottom **left**: the home
-hero puts the portrait on the right, so a panel in the right corner lands on his face.
+The panel opens only when the **Ask ATINDLET BOT** launcher is clicked. Nothing opens on its own, so it
+can never land on the hero portrait or the calls to action beneath it.
 
-On the home page it waits for the hero to scroll mostly out of view before opening. That hero fills the
-viewport, with the portrait right and the headline, summary and both calls to action left, so a panel
-large enough to hold a conversation covers one or the other wherever it sits. Pages without a `.hero`
-open on a timer instead. The panel is translucent with a backdrop blur for the same reason. `404.html` carries its own
+It sits bottom **left** regardless: the home hero puts the portrait on the right, so an open panel in
+the right corner covers his face. The panel is translucent with a backdrop blur for the same reason,
+so whatever it does overlap still reads through. `404.html` carries its own
 inline styles and no `style.css`, so the widget is not wired in there.
 
 Giving it a real language model would mean putting a serverless function in front of an API key. The
