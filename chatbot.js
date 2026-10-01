@@ -357,8 +357,29 @@
     var seen;
     try { seen = window.sessionStorage.getItem(KEY); } catch (err) { seen = '1'; }
     if (seen) return;
-    try { window.sessionStorage.setItem(KEY, '1'); } catch (err) { /* private mode */ }
-    window.setTimeout(function () { if (!open) setOpen(true); }, 1400);
+
+    function pop() {
+      if (open) return;
+      try { window.sessionStorage.setItem(KEY, '1'); } catch (err) { /* private mode */ }
+      setOpen(true);
+    }
+
+    // The home page hero fills the viewport: the portrait on the right, the
+    // headline, summary and both calls to action on the left. A panel big
+    // enough to hold a conversation covers one or the other wherever it sits,
+    // and burying "Let's work together" is the worst of those options. So on
+    // the hero page it waits until the hero is mostly scrolled past, then
+    // pops. Every other page opens on the timer, nothing there to block.
+    var hero = document.querySelector('.hero');
+    if (!hero || !('IntersectionObserver' in window)) {
+      window.setTimeout(pop, 1400);
+      return;
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].intersectionRatio < 0.4) { io.disconnect(); pop(); }
+    }, { threshold: [0, 0.4, 1] });
+    io.observe(hero);
   }
 
   function init() {
