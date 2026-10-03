@@ -324,7 +324,25 @@ ul { list-style: none; }
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-.fact-icon { font-size: 1.6rem; }
+.fact-icon {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(242, 166, 90, 0.16);
+}
+.fact-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--amber-dark);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .fact strong { display: block; font-size: 0.98rem; color: var(--teal-900); }
 .fact small { color: var(--ink-soft); font-size: 0.82rem; }
 
@@ -464,7 +482,16 @@ ul { list-style: none; }
   display: flex; align-items: center; justify-content: center;
   background: linear-gradient(135deg, var(--teal-800), var(--teal-700));
 }
-.achieve-icon { font-size: 2.4rem; }
+.achieve-icon { display: flex; }
+.achieve-icon svg {
+  width: 46px;
+  height: 46px;
+  fill: none;
+  stroke: var(--amber);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .achieve-body { padding: 20px 22px 24px; }
 .achieve-card h2, .achieve-card h3 { font-size: 1rem; color: var(--teal-900); margin-bottom: 8px; }
 .achieve-card p { font-size: 0.88rem; color: var(--ink-soft); }
@@ -555,8 +582,40 @@ ul { list-style: none; }
   word-break: break-word;
 }
 .contact-card:hover { background: rgba(242,166,90,0.15); transform: translateY(-4px); }
-.contact-card-icon { font-size: 1.5rem; }
-.location-line { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+.contact-card-icon { display: flex; align-items: center; justify-content: center; height: 26px; }
+.contact-card-icon svg {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: var(--amber);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* The LinkedIn mark is a solid logo, not a line icon: it needs filling, and
+   stroking it would thicken the letterforms. */
+.contact-card-icon svg.icon-brand { fill: var(--amber); stroke: none; }
+.contact-card:hover .contact-card-icon svg { stroke: var(--white); }
+.contact-card:hover .contact-card-icon svg.icon-brand { fill: var(--white); stroke: none; }
+.location-line {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.loc-pin { display: inline-flex; }
+.loc-pin svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: var(--amber);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 /* Footer */
 .site-footer { padding: 26px 0; background: var(--teal-900); }
