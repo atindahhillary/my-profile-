@@ -43,6 +43,31 @@ files, plus `.footer-nav`, plus the pager links on the two neighbouring pages, p
 That duplication is the price of keeping the site dependency-free; if the menu starts changing often,
 that is the point to introduce a small static generator rather than hand-editing ten files.
 
+### Cache busting
+
+`style.css`, `main.js` and `chatbot.js` are referenced with a `?v=YYYYMMDD` query across all ten
+pages. **Bump it in every page whenever you change one of those three files.**
+
+This matters more than it looks. HTML and CSS are cached separately, so without it a returning visitor
+can receive new markup against their old stylesheet. That is not a cosmetic problem: the icons added in
+#11 had no intrinsic size, and with the stylesheet missing each one rendered at 1264x1264 filled solid
+black. The icons now carry their own `width`, `height`, `fill` and `stroke` attributes so they survive
+on their own, and the version query keeps the rest of the site in step.
+
+### Icons
+
+Icons are inline SVG, never emoji: emoji render in the operating system's own set, so they match
+Apple's, Microsoft's or Google's styling rather than this site's.
+
+Each one carries intrinsic `width`, `height`, `fill="none"`, `stroke="currentColor"` and stroke
+geometry as **attributes**, so it renders correctly with no CSS at all. The stylesheet only refines
+them: the wrapper sets `color`, which `currentColor` picks up, so one declaration recolours an icon.
+The LinkedIn mark is the exception, a solid logo that takes `fill="currentColor"` and no stroke;
+stroking it thickens the letterforms.
+
+Draw at a 24 unit viewBox to match the existing set, and check a new glyph enlarged before trusting it.
+A mortarboard at 20px can read as an abstract swoosh and a full-page screenshot will not show you that.
+
 ### ATINDLET BOT
 
 `chatbot.js` injects its own markup, so a page only needs

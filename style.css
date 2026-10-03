@@ -333,6 +333,7 @@ ul { list-style: none; }
   justify-content: center;
   border-radius: 10px;
   background: rgba(242, 166, 90, 0.16);
+  color: var(--amber-dark);
 }
 .fact-icon svg {
   width: 20px;
@@ -482,7 +483,7 @@ ul { list-style: none; }
   display: flex; align-items: center; justify-content: center;
   background: linear-gradient(135deg, var(--teal-800), var(--teal-700));
 }
-.achieve-icon { display: flex; }
+.achieve-icon { display: flex; color: var(--amber); }
 .achieve-icon svg {
   width: 46px;
   height: 46px;
@@ -582,7 +583,7 @@ ul { list-style: none; }
   word-break: break-word;
 }
 .contact-card:hover { background: rgba(242,166,90,0.15); transform: translateY(-4px); }
-.contact-card-icon { display: flex; align-items: center; justify-content: center; height: 26px; }
+.contact-card-icon { display: flex; align-items: center; justify-content: center; height: 26px; color: var(--amber); }
 .contact-card-icon svg {
   width: 23px;
   height: 23px;
@@ -606,7 +607,7 @@ ul { list-style: none; }
   flex-wrap: wrap;
   justify-content: center;
 }
-.loc-pin { display: inline-flex; }
+.loc-pin { display: inline-flex; color: var(--amber); }
 .loc-pin svg {
   width: 15px;
   height: 15px;
