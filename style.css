@@ -523,6 +523,18 @@ ul { list-style: none; }
   flex-wrap: wrap;
 }
 .cert-item h2, .cert-item h3 { font-size: 0.94rem; color: var(--teal-900); font-weight: 600; max-width: 65%; }
+
+/* The AfricaHackon entry is the one credential with an issued badge, so it
+   carries the mark. The badge is square; it is sized here, not in the file. */
+.cert-item-badge img {
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+.cert-item-badge h2 { flex: 1; max-width: none; }
+.cert-item span a { color: inherit; border-bottom: 1px solid rgba(217, 122, 61, 0.4); }
+.cert-item span a:hover { color: var(--teal-800); border-color: var(--teal-800); }
 .cert-item span { font-size: 0.82rem; color: var(--amber-dark); font-weight: 600; text-align: right; }
 
 /* Community */
