@@ -40,13 +40,13 @@
     {
       id: 'impact',
       keys: ['numbers', 'impact', 'results', 'metrics', 'stats', 'reach', 'how many', 'evidence', 'proof', 'outcomes'],
-      reply: "The headline figures: 5,000+ learners reached, 798+ teachers trained across 23+ schools, a 95% pass rate in the most recent cohort, 300+ girls mentored into STEM, and a KES 25M annual programme budget under management. Backend platforms he built earlier serve 50,000+ users.",
+      reply: "The headline figures: 5,000+ learners reached, 798+ teachers trained across 23+ schools, a 95% pass rate in the most recent cohort, 20 fellows in mentoring right now, 300+ girls mentored into STEM, and a KES 25M annual programme budget under management. Backend platforms he built earlier serve 50,000+ users.",
       chips: ['Tell me about the academy', 'How does he measure impact?', 'Can I hire him?']
     },
     {
       id: 'current',
       keys: ['now', 'current', 'currently', 'present', 'today', 'latest role', 'working on', 'hpf', 'academy', 'fellowship', 'mara', 'maasai', 'aitong'],
-      reply: "He leads the HPF ICT Academy in Aitong, Maasai Mara as Skills Development Program Lead. It is a learn-to-earn fellowship for pastoralist youth across three tracks: web development, cybersecurity and data analytics. A cohort of 26 fellows closed at a 95% pass rate, 86% completion and 4.1/5 satisfaction, with graduates earning verified income through digital work platforms. He manages the KES 25M annual budget behind it.",
+      reply: "He leads the HPF ICT Academy in Aitong, Maasai Mara as Skills Development Program Lead. It is a learn-to-earn fellowship for pastoralist youth across three tracks: web development, cybersecurity and data analytics. A cohort of 26 fellows went from a first laptop to paid work online: 95% passed, 86% finished, graduates now earn verified income on digital work platforms, and the cohort rated the programme 4.1/5. He is mentoring 20 fellows in the live cohort, 11 in full-stack development (MERN) and 9 in data analytics and AI. He manages the KES 25M annual budget behind it.",
       link: { href: 'experience.html', label: 'See the full experience' },
       chips: ['What did he do before?', 'How does he measure impact?', 'Can I hire him?']
     },
@@ -67,7 +67,7 @@
     {
       id: 'security',
       keys: ['security', 'cyber', 'cybersecurity', 'hacking', 'africahackon', 'safeguarding', 'data protection', 'infosec'],
-      reply: "Practitioner level, and honest about it. Attack-surface hygiene, safeguarding learners online, Microsoft 365 security and staff training, plus data-protection compliance for learner records. His most recent training is AfricaHackon Academy, Cohort 5. Cybersecurity is also one of the three tracks the academy teaches.",
+      reply: "Practitioner level, and honest about it. Attack-surface hygiene, safeguarding learners online, Microsoft 365 security and staff training, plus data-protection compliance for learner records. He is certified in the Cybersecurity Swara Course (AH Cyber Swara - 200) by AfricaHackon Academy, Cohort 5, awarded October 2026 with a certificate and a plaque. Cybersecurity is also one of the three tracks the academy teaches.",
       link: { href: 'skills.html', label: 'See the skills page' },
       chips: ['What about AI?', 'What is he working on now?', 'Can I hire him?']
     },
@@ -94,8 +94,9 @@
     },
     {
       id: 'certs',
+      re: /certificat|certifie?d?\b|credential/,
       keys: ['certif', 'qualification', 'credential', 'accredit', 'trained in', 'courses', 'lego', 'raspberry'],
-      reply: "Certified Learning Through Play and SEL Facilitator (LEGO Foundation and Care for Education), Tech4Sustainability Champion (UN System Staff College and UNEP), Designing Ed-Tech Systems with EdTech Hub, Experience AI with the Raspberry Pi Foundation and Google DeepMind, plus grant writing and project management certificates. Latest cybersecurity training: AfricaHackon Academy, Cohort 5.",
+      reply: "Certified Learning Through Play and SEL Facilitator (LEGO Foundation and Care for Education), Tech4Sustainability Champion (UN System Staff College and UNEP), Designing Ed-Tech Systems with EdTech Hub, Experience AI with the Raspberry Pi Foundation and Google DeepMind, plus grant writing and project management certificates. On cybersecurity: certified in the Cybersecurity Swara Course (AH Cyber Swara - 200), AfricaHackon Academy Cohort 5, October 2026.",
       link: { href: 'certifications.html', label: 'See all certifications' },
       chips: ['What are his skills?', 'Where did he study?', 'Tell me about the cybersecurity work']
     },
