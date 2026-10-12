@@ -537,6 +537,37 @@ ul { list-style: none; }
 .cert-item span a:hover { color: var(--teal-800); border-color: var(--teal-800); }
 .cert-item span { font-size: 0.82rem; color: var(--amber-dark); font-weight: 600; text-align: right; }
 
+/* The AfricaHackon credential arrived as a photograph, a certificate and a
+   plaque, in three different aspect ratios. The documents are never cropped,
+   so their text stays readable; a shared image height lines the three up
+   without forcing one shape on all of them. */
+.cert-proof {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 22px;
+  margin-bottom: 32px;
+}
+.cert-proof figure { margin: 0; max-width: 100%; }
+.cert-proof img {
+  display: block;
+  /* A fixed height gives each image a predictable width, so the three fit one
+     row. It scales with the viewport because three fixed widths plus gaps
+     outgrow the container well before the mobile breakpoint. */
+  height: clamp(200px, 24vw, 330px);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+/* The caption must not widen its figure: the image alone decides how wide a
+   figure is, or three long captions push the row apart. Zero width keeps the
+   caption out of the intrinsic size; min-width fills the figure afterwards. */
+.cert-proof .photo-caption { margin-top: 10px; width: 0; min-width: 100%; }
+
 /* Community */
 .community-grid {
   display: grid;
@@ -1071,6 +1102,8 @@ body.subpage .site-header:not(.scrolled) .nav a.nav-cta { color: var(--teal-900)
   .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 12px; }
   .impact-item strong { font-size: 1.7rem; }
   .cert-item { flex-direction: column; align-items: flex-start; }
+  .cert-proof figure { flex: 1 1 100%; }
+  .cert-proof img { height: auto; width: 100%; }
   .cert-item span { text-align: left; }
   .hero { text-align: left; }
 }
