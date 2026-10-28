@@ -45,8 +45,8 @@
     },
     {
       id: 'current',
-      keys: ['now', 'current', 'currently', 'present', 'today', 'latest role', 'working on', 'hpf', 'academy', 'fellowship', 'mara', 'maasai', 'aitong'],
-      reply: "He leads the HPF ICT Academy in Aitong, Maasai Mara as Skills Development Program Lead. It is a learn-to-earn fellowship for pastoralist youth across three tracks: web development, cybersecurity and data analytics. A cohort of 26 fellows went from a first laptop to paid work online: 95% passed, 86% finished, graduates now earn verified income on digital work platforms, and the cohort rated the programme 4.1/5. He is mentoring 20 fellows in the live cohort, 11 in full-stack development (MERN) and 9 in data analytics and AI. He manages the KES 25M annual budget behind it.",
+      keys: ['now', 'current', 'currently', 'present', 'today', 'latest role', 'working on', 'hpf', 'academy', 'fellowship', 'mara', 'maasai', 'aitong', 'designed', 'who built', 'who created', 'fellows', 'trainees'],
+      reply: "He designed and leads the HPF ICT Academy in Aitong, Maasai Mara as Skills Development Program Lead. It is a learn-to-earn fellowship for pastoralist youth across three tracks: web development, cybersecurity and data analytics. Fellows arrive having never used a computer and leave working in the field they trained in. A cohort of 26 fellows went from a first laptop to paid work online: 95% passed, 86% finished, graduates now earn verified income on digital work platforms, and the cohort rated the programme 4.1/5. He is mentoring 20 fellows in the live cohort, 11 in full-stack development (MERN) and 9 in data analytics and AI, who build solutions for problems in their own community: climate change, employability and mental health. He manages the KES 25M annual budget behind it.",
       link: { href: 'experience.html', label: 'See the full experience' },
       chips: ['What did he do before?', 'How does he measure impact?', 'Can I hire him?']
     },
@@ -73,8 +73,9 @@
     },
     {
       id: 'ai',
+      re: /\bai\b|artificial intelligence|machine learning/,
       keys: ['ai', 'artificial intelligence', 'automation', 'machine learning', 'ml', 'llm', 'ai literacy', 'deepmind'],
-      reply: "AI-assisted learning platforms, workflow automation, and AI literacy curricula built for low-bandwidth, low-device classrooms. He is certified through Experience AI with the Raspberry Pi Foundation and Google DeepMind, and took that straight into Kenyan classrooms so teachers can teach it themselves.",
+      reply: "AI-assisted learning platforms, workflow automation, and AI literacy curricula built for low-bandwidth, low-device classrooms. He is certified through Experience AI with the Raspberry Pi Foundation and Google DeepMind, and took that straight into Kenyan classrooms so teachers can teach it themselves. At the academy, fellows on the AI track build solutions for local problems: climate change, employability and mental health.",
       link: { href: 'stem.html', label: 'See the STEM work' },
       chips: ['Tell me about the cybersecurity work', 'What has he been certified in?', 'What are his skills?']
     },
