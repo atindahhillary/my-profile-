@@ -46,7 +46,7 @@
     {
       id: 'current',
       keys: ['now', 'current', 'currently', 'present', 'today', 'latest role', 'working on', 'hpf', 'academy', 'fellowship', 'mara', 'maasai', 'aitong', 'designed', 'who built', 'who created', 'fellows', 'trainees'],
-      reply: "He designed and leads the HPF ICT Academy in Aitong, Maasai Mara as Skills Development Program Lead. It is a learn-to-earn fellowship for pastoralist youth across three tracks: web development, cybersecurity and data analytics. Fellows arrive having never used a computer and leave working in the field they trained in. A cohort of 26 fellows went from a first laptop to paid work online: 95% passed, 86% finished, graduates now earn verified income on digital work platforms, and the cohort rated the programme 4.1/5. He is mentoring 20 fellows in the live cohort, 11 in full-stack development (MERN) and 9 in data analytics and AI, who build solutions for problems in their own community: climate change, employability and mental health. He manages the KES 25M annual budget behind it.",
+      reply: "He designed and leads the HPF ICT Academy in Aitong, Maasai Mara as Skills Development Program Lead. It is a learn-to-earn fellowship for pastoralist youth across three tracks: web development, cybersecurity and data analytics. Fellows arrive having never used a computer and leave working in the field they trained in. A cohort of 26 fellows came all the way through to paid work online: 95% passed, 86% finished, graduates now earn verified income on digital work platforms, and the cohort rated the programme 4.1/5. He is mentoring 20 fellows in the live cohort, 11 in full-stack development (MERN) and 9 in data analytics and AI, who build for problems in their own community: climate change, employability and mental health. He manages the KES 25M annual budget behind it.",
       link: { href: 'experience.html', label: 'See the full experience' },
       chips: ['What did he do before?', 'How does he measure impact?', 'Can I hire him?']
     },
@@ -82,7 +82,7 @@
     {
       id: 'me',
       keys: ['measure', 'm&e', 'mel', 'monitoring', 'evaluation', 'data', 'salesforce', 'power bi', 'reporting', 'dashboard', 'kpi', 'donor report'],
-      reply: "He sets up the measurement, not just the delivery. Salesforce CRM and Power BI pipelines, KPI frameworks, donor analytics and data-protection compliance. At SELution he designed per-child measurement that rolls up to cluster dashboards. Weekly executive reports and monthly consolidated donor reports are part of the current role.",
+      reply: "He sets up the measurement as well as the delivery. Salesforce CRM and Power BI pipelines, KPI frameworks, donor analytics and data-protection compliance. At SELution he designed per-child measurement that rolls up to cluster dashboards. Weekly executive reports and monthly consolidated donor reports are part of the current role.",
       link: { href: 'work.html', label: 'See how engagements run' },
       chips: ['Can I hire him?', 'Show me the numbers', 'What are his skills?']
     },
@@ -125,7 +125,7 @@
     {
       id: 'hire',
       keys: ['hire', 'hiring', 'work with', 'consult', 'engage', 'available', 'services', 'freelance', 'contract', 'partner', 'collaborat', 'recruit', 'job', 'opportunit'],
-      reply: "Yes. Founders, CEOs and programme leads bring him in when a digital skills or EdTech initiative has to produce evidence rather than activity. Engagements run as short advisory sprints or full delivery: programme design and launch, impact measurement and reporting, teacher capacity building, AI and automation adoption. He is Nairobi-based, open to fieldwork and rural travel, on-site and hybrid.",
+      reply: "Yes. Founders, CEOs and programme leads bring him in when a digital skills or EdTech initiative has to stand up to scrutiny. Engagements run as short advisory sprints or full delivery: programme design and launch, impact measurement and reporting, teacher capacity building, AI and automation adoption. He is Nairobi-based, open to fieldwork and rural travel, on-site and hybrid.",
       link: { href: 'work.html', label: 'See the engagement types' },
       chips: ['How do I reach him?', 'How does he measure impact?', 'Show me the numbers']
     },
