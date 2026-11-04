@@ -94,6 +94,14 @@
       chips: ['What about AI?', 'What does he do in the community?', 'Show me the numbers']
     },
     {
+      id: 'fit',
+      re: /good fit|right fit|a fit\b|how (do|does) (you|he) work|what('| i)?s (your|his) (process|approach|rate|fee)|how much|cost|pricing|charge/,
+      keys: ['fit for', 'process', 'approach', 'methodology', 'phases', 'how it works', 'rate', 'rates', 'fees', 'pricing', 'cost', 'charge', 'scope'],
+      reply: "There is a full proposal on the site: the problem he is usually called about, who the work suits and who it does not, the six phases an engagement runs through, and the conditions he designs for, meaning no reliable power, thin connectivity, shared devices and learners who have never switched on a computer. Scope and fees are set per engagement, after the diagnostic, so there is no rate card to quote. Email him and he will give you one.",
+      link: { href: 'proposal.html', label: 'Read the full proposal' },
+      chips: ['Can I hire him?', 'Show me the numbers', 'How do I reach him?']
+    },
+    {
       id: 'certs',
       re: /certificat|certifie?d?\b|credential/,
       keys: ['certif', 'qualification', 'credential', 'accredit', 'trained in', 'courses', 'lego', 'raspberry'],
@@ -126,7 +134,7 @@
       id: 'hire',
       keys: ['hire', 'hiring', 'work with', 'consult', 'engage', 'available', 'services', 'freelance', 'contract', 'partner', 'collaborat', 'recruit', 'job', 'opportunit'],
       reply: "Yes. Founders, CEOs and programme leads bring him in when a digital skills or EdTech initiative has to stand up to scrutiny. Engagements run as short advisory sprints or full delivery: programme design and launch, impact measurement and reporting, teacher capacity building, AI and automation adoption. He is Nairobi-based, open to fieldwork and rural travel, on-site and hybrid.",
-      link: { href: 'work.html', label: 'See the engagement types' },
+      link: { href: 'proposal.html', label: 'Read the full proposal' },
       chips: ['How do I reach him?', 'How does he measure impact?', 'Show me the numbers']
     },
     {
