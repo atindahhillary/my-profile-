@@ -72,6 +72,46 @@
     });
   }
 
+  // The "More" group in the desktop bar. Below 960px the button is hidden and
+  // its links flatten into the mobile panel, so none of this runs there.
+  var navMore = document.getElementById('navMore');
+  var navMoreBtn = document.getElementById('navMoreBtn');
+
+  function setMoreOpen(isOpen) {
+    if (!navMore || !navMoreBtn) return;
+    navMore.classList.toggle('open', isOpen);
+    navMoreBtn.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  if (navMore && navMoreBtn) {
+    navMoreBtn.addEventListener('click', function (event) {
+      event.stopPropagation();
+      setMoreOpen(!navMore.classList.contains('open'));
+    });
+
+    navMore.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setMoreOpen(false); });
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!navMore.classList.contains('open')) return;
+      if (navMore.contains(event.target)) return;
+      setMoreOpen(false);
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape' || !navMore.classList.contains('open')) return;
+      setMoreOpen(false);
+      navMoreBtn.focus();
+    });
+
+    // A menu left open at desktop width must not persist into the flattened
+    // mobile layout, where "open" means nothing and the caret is gone.
+    window.addEventListener('resize', function () {
+      if (window.innerWidth <= 960) setMoreOpen(false);
+    });
+  }
+
   // Animated counters: run from zero to target over 3 seconds when scrolled into view
   var COUNT_DURATION = 3000;
   var counters = document.querySelectorAll('.count');

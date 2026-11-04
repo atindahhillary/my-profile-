@@ -92,6 +92,59 @@ ul { list-style: none; }
 /* Without this a squeezed row breaks a label like "Work With Me" across
    three lines rather than letting the bar run wide and hit its breakpoint. */
 .nav a { white-space: nowrap; }
+
+/* Ten top-level links were too many to read at a glance. Four stay in the bar;
+   the six evidence pages sit under More. On the mobile panel the button is
+   dropped and the group flattens into the column, so there is no nested
+   disclosure to open twice. */
+.nav-more { position: relative; display: flex; align-items: center; }
+.nav-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav-more-btn:hover, .nav-more-btn.is-active { color: var(--amber-dark); }
+.site-header:not(.scrolled) .nav-more-btn:hover,
+.site-header:not(.scrolled) .nav-more-btn.is-active { color: var(--amber); }
+.nav-caret { transition: transform 0.2s ease; }
+.nav-more.open .nav-caret { transform: rotate(180deg); }
+
+.nav-more-menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  right: 0;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+}
+.nav-more.open .nav-more-menu { opacity: 1; visibility: visible; transform: none; }
+/* The menu sits on white even when the header itself is transparent over the
+   hero, so these links never take the header's light-on-dark colour. */
+.nav-more-menu a {
+  padding: 9px 12px;
+  border-radius: 9px;
+  font-size: 0.9rem;
+  color: var(--ink) !important;
+}
+.nav-more-menu a:hover { background: var(--cream-alt); color: var(--teal-800) !important; }
+.nav-more-menu a[aria-current="page"] { color: var(--amber-dark) !important; font-weight: 600; }
 .site-header:not(.scrolled) .nav a { color: rgba(255,255,255,0.88); }
 .nav a:hover { color: var(--amber-dark); }
 .site-header:not(.scrolled) .nav a:hover { color: var(--amber); }
@@ -1103,6 +1156,15 @@ body.subpage .site-header:not(.scrolled) .nav a.nav-cta { color: var(--teal-900)
   .nav-cta { padding: 7px 14px; }
 }
 @media (max-width: 960px) {
+  .nav-more { width: 100%; }
+  .nav-more-btn { display: none; }
+  .nav-more-menu {
+    position: static; opacity: 1; visibility: visible; transform: none;
+    min-width: 0; padding: 0; gap: 16px;
+    background: none; border: none; border-radius: 0; box-shadow: none;
+  }
+  .nav-more-menu a { padding: 0; font-size: inherit; border-radius: 0; }
+  .nav-more-menu a:hover { background: none; }
   .nav { position: fixed; top: 68px; left: 0; right: 0; background: var(--cream); flex-direction: column; align-items: flex-start; padding: 20px 28px; gap: 16px; font-size: 0.95rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: translateY(-150%); opacity: 0; transition: transform 0.3s ease, opacity 0.3s ease; }
   .nav.open { transform: translateY(0); opacity: 1; }
   .nav a { color: var(--ink) !important; }
