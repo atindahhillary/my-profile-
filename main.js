@@ -199,3 +199,8 @@
 
   revealTargets.forEach(function (el) { observer.observe(el); });
 })();
+
+// Offline support: saves the site and the bot so both work without a connection (see sw.js)
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+  window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
+}

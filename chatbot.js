@@ -32,7 +32,7 @@
     },
     {
       id: 'who',
-      keys: ['who', 'about', 'tell me about', 'background', 'profile', 'summary', 'introduce', 'bio'],
+      keys: ['who', 'what does he do', 'what do you do', 'about', 'background', 'profile', 'summary', 'introduce', 'bio'],
       reply: "Hillary is a STEM, EdTech and digital transformation leader based in Nairobi. He designs digital skills and STEM pathways that move people into paid work, then builds the data, AI and security systems that prove the result. The range runs across education, conservation, finance and software.",
       link: { href: 'about.html', label: 'Read the full About page' },
       chips: ['What is he working on now?', 'Show me the numbers', 'What are his skills?']
@@ -58,6 +58,37 @@
       chips: ['What is he working on now?', 'What are his skills?', 'What has he been certified in?']
     },
     {
+      id: 'aiedu',
+      re: /\bai\b.*\b(teach|teacher|school|education|classroom)|co.?design/,
+      keys: ['use ai', 'ai with', 'co-design', 'codesign', 'co design', 'teach for kenya', 'edtech east africa', 'anthropic', 'ai in education', 'ai for teachers', 'ecosystem', 'offline excel', 'excel tool'],
+      reply: "He trains and co-designs with teachers, school leaders and other ecosystem builders so AI becomes a companion in the classroom rather than something to fear. At a co-design session with EdTech East Africa, Teach For Kenya and Anthropic, one teacher with no internet built an offline Excel tool that fixes attendance tracking, lesson prep and assessments. That is the model: teachers bring a real challenge from their own classroom and leave with a working solution they built. When a problem needs more than a spreadsheet, he builds the tool himself.",
+      link: { href: 'experience.html', label: 'Read the story' },
+      chips: ['What has he built?', 'What about AI?', 'Can I hire him?']
+    },
+    {
+      id: 'built',
+      keys: ['built', 'build', 'projects', 'products', 'apps', 'tools', 'portfolio', 'solutions', 'made', 'demo'],
+      reply: "Two live tools. Jamii Learn Companion helps herders and parents learn carbon markets on their own phone, in Kiswahili or English, through a conversation they can listen to. maas.AI GRC Hub gives schools, NGOs and small businesses a workspace to run security tests, see what to fix first, and hand partners signed proof instead of a claim. Both are open to try.",
+      link: { href: 'experience.html', label: 'See both on the Experience page' },
+      chips: ['Tell me about Jamii Learn', 'Tell me about maas.AI', 'What about AI?']
+    },
+    {
+      id: 'jamii',
+      re: /jamii/,
+      keys: ['jamii', 'carbon', 'kiswahili', 'swahili', 'herder', 'indigenous', 'learn companion'],
+      reply: "Jamii Learn Companion is a carbon-literacy companion for communities whose land is being discussed in carbon deals. It works on a phone in Kiswahili or English, starts by asking what people already know and what worries them, teaches through a conversation they can listen to, and plants a tree on screen as they learn. The public version is a demo that runs in the browser, so nothing a learner types leaves their device.",
+      link: { href: 'https://jamii-learn-companion.vercel.app/', label: 'Open the live demo' },
+      chips: ['Tell me about maas.AI', 'What has he built?', 'Can I hire him?']
+    },
+    {
+      id: 'maas',
+      re: /maas/,
+      keys: ['maas', 'grc', 'governance', 'compliance', 'risk', 'attestation', 'iso', 'audit'],
+      reply: "maas.AI GRC Hub gives every organisation its own security workspace to run tests, see what to fix first, and hand customers, boards and insurers signed proof. Its score shows the gap between what you claim and what you can prove. It is in public beta.",
+      link: { href: 'https://maas-ai-grc-hub.vercel.app/', label: 'Open the public beta' },
+      chips: ['Tell me about Jamii Learn', 'Tell me about the cybersecurity work', 'Can I hire him?']
+    },
+    {
       id: 'skills',
       keys: ['skill', 'skills', 'competenc', 'good at', 'expertise', 'strengths', 'capabilit', 'what can he do', 'toolkit'],
       reply: "Six areas: programme design and delivery, data and M&E reporting, AI automation and ML, cybersecurity and digital safety, partnerships and stakeholders, and grants and proposal writing. Underneath those sit fellowship and cohort management, Trainer of Trainers, field operations, safeguarding and data protection.",
@@ -75,9 +106,9 @@
       id: 'ai',
       re: /\bai\b|artificial intelligence|machine learning/,
       keys: ['ai', 'artificial intelligence', 'automation', 'machine learning', 'ml', 'llm', 'ai literacy', 'deepmind'],
-      reply: "AI-assisted learning platforms, workflow automation, and AI literacy curricula built for low-bandwidth, low-device classrooms. He is certified through Experience AI with the Raspberry Pi Foundation and Google DeepMind, and took that straight into Kenyan classrooms so teachers can teach it themselves. At the academy, fellows on the AI track build solutions for local problems: climate change, employability and mental health.",
+      reply: "AI-assisted learning platforms, workflow automation, and AI literacy curricula built for low-bandwidth, low-device classrooms. He is certified through Experience AI with the Raspberry Pi Foundation and Google DeepMind, and took that straight into Kenyan classrooms so teachers can teach it themselves. At the academy, fellows on the AI track build solutions for local problems: climate change, employability and mental health. He also co-designs with teachers so they use AI in their own lessons, and builds practical tools like Jamii Learn Companion and maas.AI GRC Hub.",
       link: { href: 'stem.html', label: 'See the STEM work' },
-      chips: ['Tell me about the cybersecurity work', 'What has he been certified in?', 'What are his skills?']
+      chips: ['How does he use AI with teachers?', 'What has he built?', 'What has he been certified in?']
     },
     {
       id: 'me',
@@ -118,7 +149,7 @@
     },
     {
       id: 'community',
-      keys: ['community', 'volunteer', 'advisory', 'board', 'mentor', 'watoto', 'ishara', 'mukogodo', 'yali', 'conservation', 'climate'],
+      keys: ['community', 'in the community', 'volunteer', 'advisory', 'board', 'mentor', 'watoto', 'ishara', 'mukogodo', 'yali', 'conservation', 'climate'],
       reply: "Outside the day job: WiSSAfrica outreach and partnerships, Watoto Go Green advisory on climate learning, Ishara Foundation on Deaf inclusion and accessible digital learning, the Mukogodo Forest Wild Walk backing indigenous-led conservation, plus EdTech East Africa, I Choose Life and YALI.",
       link: { href: 'community.html', label: 'See community work' },
       chips: ['Tell me about STEM and robotics', 'What does he do?', 'How do I reach him?']
@@ -139,7 +170,7 @@
     },
     {
       id: 'contact',
-      keys: ['contact', 'reach', 'email', 'phone', 'call', 'linkedin', 'get in touch', 'talk to', 'speak', 'message', 'hire him directly'],
+      keys: ['contact', 'reach him', 'reach', 'email', 'phone', 'call', 'linkedin', 'get in touch', 'talk to', 'speak', 'message', 'hire him directly'],
       reply: "Email atindahhillary@gmail.com or call +254 790 780 579. He is also on LinkedIn. Based in Nairobi, Kenya, available on-site and hybrid, and open to fieldwork and rural travel.",
       link: { href: 'contact.html', label: 'Open the contact page' },
       chips: ['Can I hire him?', 'Can I see his resume?', 'What does he do?']
@@ -241,7 +272,8 @@
     var head = node('div', 'abot-head');
     var title = node('div', 'abot-title');
     title.appendChild(node('strong', null, NAME));
-    title.appendChild(node('span', 'abot-sub', 'Ask about Hillary’s work'));
+    var sub = node('span', 'abot-sub');
+    title.appendChild(sub);
     var close = node('button', 'abot-close');
     close.type = 'button';
     close.setAttribute('aria-label', 'Close ' + NAME);
@@ -282,7 +314,15 @@
     root.appendChild(launcher);
     document.body.appendChild(root);
 
-    el = { root: root, launcher: launcher, panel: panel, log: log, chips: chips, form: form, input: input, close: close };
+    el = { root: root, launcher: launcher, panel: panel, log: log, chips: chips, form: form, input: input, close: close, sub: sub };
+    showStatus();
+  }
+
+  // Answers come from the KB above, so the bot works the same with or without a connection.
+  function showStatus() {
+    var on = navigator.onLine;
+    el.sub.textContent = on ? 'Online · Ask about Hillary’s work' : 'Offline · Still answering';
+    el.sub.classList.toggle('abot-offline', !on);
   }
 
   function scrollLog() { el.log.scrollTop = el.log.scrollHeight; }
@@ -292,8 +332,10 @@
     var bubble = node('div', 'abot-bubble');
     bubble.appendChild(node('p', null, text));
     if (link) {
-      var a = node('a', 'abot-link', link.label + ' →');
+      var external = /^https?:/.test(link.href);
+      var a = node('a', 'abot-link', link.label + (external && !navigator.onLine ? ' (needs internet)' : '') + ' →');
       a.href = link.href;
+      if (external) { a.target = '_blank'; a.rel = 'noopener'; }
       bubble.appendChild(a);
     }
     row.appendChild(bubble);
@@ -358,6 +400,8 @@
     el.launcher.addEventListener('click', function () { setOpen(!open); });
     el.close.addEventListener('click', function () { setOpen(false); });
     el.form.addEventListener('submit', function (e) { e.preventDefault(); ask(el.input.value); });
+    window.addEventListener('online', showStatus);
+    window.addEventListener('offline', showStatus);
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && open) { setOpen(false); }
     });

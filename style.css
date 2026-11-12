@@ -1129,10 +1129,24 @@ body.subpage .site-header:not(.scrolled) .nav a.nav-cta { color: var(--teal-900)
   border: 0;
 }
 
+.abot-sub::before {
+  content: "";
+  display: inline-block;
+  width: 7px; height: 7px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #5fd39b;
+  vertical-align: 1px;
+}
+.abot-sub.abot-offline::before { background: var(--amber); }
+
 @media (max-width: 480px) {
   .abot { left: 14px; right: 14px; bottom: 14px; align-items: stretch; }
-  .abot-panel { width: 100%; max-height: 60vh; }
+  /* dvh keeps the panel above the phone keyboard */
+  .abot-panel { width: 100%; max-height: 60vh; max-height: 60dvh; }
   .abot-launcher { align-self: flex-start; }
+  /* 16px stops iPhones zooming the page when the input is tapped */
+  .abot-input { font-size: 16px; }
 }
 
 @media print { .abot { display: none !important; } }
@@ -1606,3 +1620,47 @@ main:focus,
 .achieve-media-brand:hover { background: #08528f; }
 .achieve-media-brand:focus-visible { outline-offset: -4px; }
 .achieve-card .card-link { margin-top: 12px; }
+
+/* ---------- Experience: story lead, sub-label, portrait hero, project cards ---------- */
+
+.tl-story {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.tl-story strong { color: var(--teal-900); }
+.tl-sub {
+  margin: 18px 0 10px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber-dark);
+}
+.tl-media-portrait img { aspect-ratio: 3 / 2; object-position: center 40%; }
+.tl-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.tl-project {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  background: var(--cream);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.tl-project:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.tl-project:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.tl-project img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block; }
+.tl-project-body { display: flex; flex-direction: column; gap: 8px; padding: 16px 18px 18px; font-size: 0.88rem; line-height: 1.6; }
+.tl-project-body strong { font-family: var(--font-display); font-size: 1.05rem; color: var(--teal-900); }
+.tl-project-body em { font-style: normal; font-weight: 600; color: var(--teal-700); margin-top: auto; }
+.tl-project-body em::after { content: " \2192"; }
+@media (prefers-reduced-motion: reduce) { .tl-project, .tl-project:hover { transition: none; transform: none; } }
