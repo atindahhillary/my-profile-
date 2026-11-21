@@ -1664,3 +1664,6 @@ main:focus,
 .tl-project-body em { font-style: normal; font-weight: 600; color: var(--teal-700); margin-top: auto; }
 .tl-project-body em::after { content: " \2192"; }
 @media (prefers-reduced-motion: reduce) { .tl-project, .tl-project:hover { transition: none; transform: none; } }
+
+.tl-projects-one { grid-template-columns: minmax(0, 560px); }
+.tl-project-body b { color: var(--teal-900); }
