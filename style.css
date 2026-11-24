@@ -1898,3 +1898,27 @@ body.subpage .site-header .brand span { color: #a4501a; }
 
 /* co-design photo is now a true 3:2 landscape */
 .tl-media-portrait img { aspect-ratio: 3 / 2; object-position: center; }
+
+/* ---------- Expert panel fixes ---------- */
+:root { --amber-dark: #a4501a; }
+.ig-lewa { background: #4d6b5c; }
+.section-title { line-height: 1.15; text-wrap: balance; }
+.role-line { text-wrap: balance; }
+@media (max-width: 1024px) { .abot-launcher-text { display: none; } .abot-launcher { width: 52px; height: 52px; padding: 0; justify-content: center; } }
+@media (min-width: 600px) { .starter-chips { display: grid; grid-template-columns: repeat(4, max-content); } }
+@media (max-width: 600px) { .contact-copy { text-align: left; } }
+.recog { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 10px; margin: 26px 0 0; font-size: 0.8rem; color: rgba(255,255,255,0.85); }
+.recog span { padding: 5px 12px; border: 1px solid rgba(242,166,90,0.4); border-radius: 999px; }
+.recog .recog-label { border: none; padding: 0 4px 0 0; color: var(--amber); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem; }
+.method-steps { list-style: none; padding: 0; margin: 8px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; counter-reset: none; }
+.method-steps li { position: relative; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 20px 18px; display: flex; flex-direction: column; gap: 8px; }
+.method-steps li:not(:last-child)::after { content: "\2192"; position: absolute; right: -14px; top: 30px; color: #a4501a; font-weight: 700; z-index: 1; }
+.method-n { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--teal-900); color: var(--amber); font-family: var(--font-display); font-weight: 700; }
+.method-steps h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--teal-900); margin: 0; }
+.method-steps p { margin: 0; color: var(--ink-soft); font-size: 0.9rem; line-height: 1.55; }
+.method-proof { margin-top: auto; align-self: flex-start; font-size: 0.74rem; font-weight: 700; color: #a4501a; background: rgba(242,166,90,0.15); padding: 4px 10px; border-radius: 999px; }
+@media (max-width: 720px) { .method-steps li:not(:last-child)::after { display: none; } }
+.orbit-pause { position: absolute; right: 0; bottom: -6px; z-index: 4; font: inherit; font-size: 0.74rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.35); background: rgba(0,0,0,0.2); color: var(--white); cursor: pointer; display: none; }
+.orbits.is-orbiting ~ .orbit-pause { display: inline-block; }
+@media (prefers-reduced-motion: reduce) { .orbit-pause { display: none !important; } }
+.deliver-list { counter-reset: none; }

@@ -27,10 +27,10 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="hero-headshot.jpg" fetchpriority="high">
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css?v=20261124j">
+<link rel="preload" as="image" href="hero-headshot.jpg?v=3" fetchpriority="high">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css?v=20261124k">
 
 <script type="application/ld+json">
 {
@@ -116,12 +116,13 @@
         <p class="eyebrow"><span class="eyebrow-loc">Nairobi, Kenya</span></p>
         <h1>Hillary Atindah George</h1>
         <p class="role-line">Digital Transformation, EdTech and Technology Programme Leader</p>
-        <p class="hero-summary"><strong>Programmes that reach the last school, and prove it.</strong> I design and lead digital learning programmes for schools and young people in low-resource settings, with AI tools, cybersecurity safeguards and data systems built in from day one. Five years since 2021, nearly three of them leading education programmes.</p>
+        <p class="hero-summary"><strong>Programmes that reach the last school, and prove it.</strong> I design and lead digital learning programmes for schools and young people in low-resource settings, with AI tools, cybersecurity safeguards and data systems built in from day one. And I build the tools myself: four of them are live below, and you can open every one.</p>
         <div class="starter" id="starter">
           <p class="starter-q">Who's visiting? Tap one and I'll tell you where to start.</p>
           <div class="starter-chips" role="group" aria-label="I am a">
             <button type="button" data-who="founder" aria-pressed="false">Founder</button>
             <button type="button" data-who="ceo" aria-pressed="false">CEO</button>
+            <button type="button" data-who="funder" aria-pressed="false">Funder</button>
             <button type="button" data-who="recruiter" aria-pressed="false">Recruiter</button>
             <button type="button" data-who="fellowship" aria-pressed="false">Fellowship</button>
             <button type="button" data-who="startup" aria-pressed="false">Startup</button>
@@ -149,13 +150,14 @@
         <svg class="avatar-ring" viewBox="0 0 220 220" aria-hidden="true">
           <circle cx="110" cy="110" r="104" fill="none" stroke="#F2A65A" stroke-width="2" stroke-dasharray="4 10"/>
         </svg>
-        <div class="orbits" aria-label="Capabilities">
-          <span class="orbit o1"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></svg></span><span class="orbit-label">Programme design</span></span>
-          <span class="orbit o2"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2.5"/><path d="M9 2.5v3M15 2.5v3M9 18.5v3M15 18.5v3M2.5 9h3M2.5 15h3M18.5 9h3M18.5 15h3"/><path d="M10 10h4v4h-4z"/></svg></span><span class="orbit-label">AI &amp; innovation</span></span>
-          <span class="orbit o3"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="8" r="3"/><path d="M2.5 20c0-3.2 2.4-5.5 5.5-5.5s5.5 2.3 5.5 5.5M11 14.9c1-.6 2.2-.9 3.5-.9 3.2 0 5.5 2.3 5.5 6"/></svg></span><span class="orbit-label">Partnerships</span></span>
-          <span class="orbit o4"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-7M21 20H3"/></svg></span><span class="orbit-label">MEAL &amp; impact</span></span>
-          <span class="orbit o5"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 4.5 5.6v5.6c0 4.6 3.2 8.6 7.5 9.9 4.3-1.3 7.5-5.3 7.5-9.9V5.6L12 2.8z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/></svg></span><span class="orbit-label">Cybersecurity</span></span>
+        <div class="orbits" role="list" aria-label="Capabilities">
+          <span class="orbit o1" role="listitem"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></svg></span><span class="orbit-label">Programme design</span></span>
+          <span class="orbit o2" role="listitem"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2.5"/><path d="M9 2.5v3M15 2.5v3M9 18.5v3M15 18.5v3M2.5 9h3M2.5 15h3M18.5 9h3M18.5 15h3"/><path d="M10 10h4v4h-4z"/></svg></span><span class="orbit-label">AI &amp; innovation</span></span>
+          <span class="orbit o3" role="listitem"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="8" r="3"/><path d="M2.5 20c0-3.2 2.4-5.5 5.5-5.5s5.5 2.3 5.5 5.5M11 14.9c1-.6 2.2-.9 3.5-.9 3.2 0 5.5 2.3 5.5 6"/></svg></span><span class="orbit-label">Partnerships</span></span>
+          <span class="orbit o4" role="listitem"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-7M21 20H3"/></svg></span><span class="orbit-label">MEAL &amp; impact</span></span>
+          <span class="orbit o5" role="listitem"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 4.5 5.6v5.6c0 4.6 3.2 8.6 7.5 9.9 4.3-1.3 7.5-5.3 7.5-9.9V5.6L12 2.8z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/></svg></span><span class="orbit-label">Cybersecurity</span></span>
         </div>
+        <button type="button" class="orbit-pause" aria-pressed="false">Pause</button>
       </div>
     </div>
     <a href="#work" class="scroll-cue" aria-label="Scroll down"><span></span></a>
@@ -172,6 +174,7 @@
         <li class="impact-item"><strong class="count" data-target="300" data-suffix="+">300+</strong><span>Girls in STEM mentored</span></li>
         <li class="impact-item"><strong class="count" data-target="25" data-suffix="M">25M</strong><span>KES annual programme budget</span></li>
       </ul>
+      <p class="recog"><span class="recog-label">Recognised</span><span>UN Tech4Sustainability Champion</span><span>World Robot Olympiad judge, 2024 and 2025</span><span>Featured on NTV EdTech Mondays</span><span>Learning Through Play Champion 2025</span><span>Injini and EdTech Hub finalist</span><span>Kenya Innovation Spark panellist</span></p>
     </div>
   </section>
 
@@ -180,32 +183,32 @@
     <div class="container">
       <p class="section-kicker">Selected work</p>
       <h2 class="section-title">Don't take my word for it. Click it.</h2>
-      <p class="trust-line">Programmes delivered with Human Practice Foundation, in partnership with Power Learn Project Africa. Certified by the LEGO Foundation, the Raspberry Pi Foundation (with Google DeepMind) and EdTech Hub.</p>
+      <p class="trust-line">Programmes delivered with Human Practice Foundation, in partnership with Power Learn Project Africa. Certified by the LEGO Foundation, the Raspberry Pi Foundation (with Google DeepMind) and EdTech Hub. Co-designed AI tools with teachers at a session run by Anthropic.</p>
       <p class="section-lede">Two programmes I led and four tools I built, each with its results and a live link. Pick one and see it working.</p>
       <div class="tl-projects home-work">
         <a class="tl-project" href="experience.html#it-academy">
           <span class="card-badge">Programme I led</span>
-          <img src="experience-it-academy.jpg?v=3" alt="" width="1400" height="788" decoding="async">
+          <img src="experience-it-academy-800.jpg" srcset="experience-it-academy-800.jpg 800w, experience-it-academy.jpg?v=3 1400w" sizes="(min-width: 961px) 360px, 92vw" alt="" width="1400" height="788" loading="lazy" decoding="async">
           <div class="tl-project-body">
             <h3 class="tl-project-title">From herding to paid work online</h3>
             <span>A learn-to-earn IT Academy for pastoralist youth in the Maasai Mara.</span>
-            <span class="tl-tags">95% pass &middot; 86% completion &middot; 3 tracks</span>
+            <span class="tl-tags">95% pass &middot; 86% completion &middot; graduates earning online</span>
             <em>Read the case</em>
           </div>
         </a>
         <a class="tl-project" href="experience.html#mt-kenya">
           <span class="card-badge">Programme I managed</span>
-          <img src="experience-school-tablets.jpg?v=3" alt="" width="1400" height="1050" loading="lazy" decoding="async">
+          <img src="experience-school-tablets-800.jpg" srcset="experience-school-tablets-800.jpg 800w, experience-school-tablets.jpg?v=3 1400w" sizes="(min-width: 961px) 360px, 92vw" alt="" width="1400" height="1050" loading="lazy" decoding="async">
           <div class="tl-project-body">
             <h3 class="tl-project-title">Digital literacy, staff room first</h3>
             <span>A school programme built from zero across the Mt Kenya region.</span>
-            <span class="tl-tags">798+ teachers &middot; 23+ schools &middot; 5,000+ learners</span>
+            <span class="tl-tags">From zero to 23+ schools &middot; 798+ teachers &middot; Salesforce and Power BI</span>
             <em>Read the case</em>
           </div>
         </a>
         <a class="tl-project" href="https://enkaji-play.vercel.app/" target="_blank" rel="noopener">
           <span class="card-badge">Built by me &middot; live</span>
-          <img src="experience-enkaji-play.jpg?v=2" alt="" width="1400" height="875" loading="lazy" decoding="async">
+          <img src="experience-enkaji-play-800.jpg" srcset="experience-enkaji-play-800.jpg 800w, experience-enkaji-play.jpg?v=2 1400w" sizes="(min-width: 961px) 360px, 92vw" alt="" width="1400" height="875" loading="lazy" decoding="async">
           <div class="tl-project-body">
             <h3 class="tl-project-title">Every enkaji is a classroom</h3>
             <span>Six Bricks play on the family phone for Mothers Who Teach.</span>
@@ -215,7 +218,7 @@
         </a>
         <a class="tl-project" href="https://jamii-learn-companion.vercel.app/" target="_blank" rel="noopener">
           <span class="card-badge">Built by me &middot; live</span>
-          <img src="experience-jamii-learn.jpg" alt="" width="1400" height="875" loading="lazy" decoding="async">
+          <img src="experience-jamii-learn-800.jpg" srcset="experience-jamii-learn-800.jpg 800w, experience-jamii-learn.jpg 1400w" sizes="(min-width: 961px) 360px, 92vw" alt="" width="1400" height="875" loading="lazy" decoding="async">
           <div class="tl-project-body">
             <h3 class="tl-project-title">Carbon literacy on a herder's phone</h3>
             <span>A Kiswahili and English learning companion, taught as a conversation.</span>
@@ -225,7 +228,7 @@
         </a>
         <a class="tl-project" href="https://maas-ai-grc-hub.vercel.app/" target="_blank" rel="noopener">
           <span class="card-badge">Built by me &middot; live</span>
-          <img src="experience-maas-grc.jpg" alt="" width="1400" height="875" loading="lazy" decoding="async">
+          <img src="experience-maas-grc-800.jpg" srcset="experience-maas-grc-800.jpg 800w, experience-maas-grc.jpg 1400w" sizes="(min-width: 961px) 360px, 92vw" alt="" width="1400" height="875" loading="lazy" decoding="async">
           <div class="tl-project-body">
             <h3 class="tl-project-title">Security you can prove</h3>
             <span>A security workspace for schools, NGOs and small businesses.</span>
@@ -235,7 +238,7 @@
         </a>
         <a class="tl-project" href="https://hpf-talent-hub.vercel.app/" target="_blank" rel="noopener">
           <span class="card-badge">Built by me &middot; live</span>
-          <img src="experience-academy-coaching.jpg?v=3" alt="" width="1400" height="825" loading="lazy" decoding="async">
+          <img src="experience-academy-coaching-800.jpg" srcset="experience-academy-coaching-800.jpg 800w, experience-academy-coaching.jpg?v=3 1400w" sizes="(min-width: 961px) 360px, 92vw" alt="" width="1400" height="825" loading="lazy" decoding="async">
           <div class="tl-project-body">
             <h3 class="tl-project-title">Meet the graduates</h3>
             <span>The HPF Talent Hub: academy trainees' profiles for employers.</span>
@@ -246,6 +249,21 @@
       </div>
     </div>
   </section>
+  <!-- METHOD -->
+  <section class="section method" id="method">
+    <div class="container">
+      <p class="section-kicker">How I work</p>
+      <h2 class="section-title">Last School First</h2>
+      <p class="section-lede"><strong>If a programme works in the last school on the road, it works everywhere.</strong> Four habits run through everything on this page.</p>
+      <ol class="method-steps">
+        <li><span class="method-n">1</span><h3>Start in the staff room</h3><p>One confident teacher reaches every learner they will ever teach.</p><span class="method-proof">798+ teachers trained</span></li>
+        <li><span class="method-n">2</span><h3>Build the proof in</h3><p>Measurement is written with the curriculum, so the evidence arrives with the programme.</p><span class="method-proof">MEAL in Salesforce and Power BI</span></li>
+        <li><span class="method-n">3</span><h3>Design for no power, no signal</h3><p>Offline sessions, shared devices and buffer weeks for the long rains.</p><span class="method-proof">Enkaji Play works offline</span></li>
+        <li><span class="method-n">4</span><h3>Leave what still runs</h3><p>Procedures, curricula and dashboards another team can run without me.</p><span class="method-proof">SOPs across 23+ schools</span></li>
+      </ol>
+    </div>
+  </section>
+
   <!-- WAYS TO WORK TOGETHER -->
   <section class="section ways" id="ways">
     <div class="container">
@@ -281,14 +299,14 @@
   <!-- EXPLORE -->
   <section class="section section-tight" id="explore">
     <div class="container">
-      <h2 class="section-kicker">More of the profile</h2>
+      <h2 class="section-kicker">The rest of the story</h2>
       <div class="explore-grid explore-grid-compact">
         <a class="explore-card" href="experience.html"><h3>Experience</h3><p>Five years since 2021, by type.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
         <a class="explore-card" href="skills.html"><h3>Skills</h3><p>The five capabilities behind the work.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
         <a class="explore-card" href="about.html"><h3>About</h3><p>How I work, and why.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
-        <a class="explore-card" href="achievements.html"><h3>Achievements</h3><p>Recognition and judged competitions.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
+        <a class="explore-card" href="achievements.html"><h3>Achievements</h3><p>UN Tech4Sustainability Champion, robotics judge, Innovation Spark panellist.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
         <a class="explore-card" href="certifications.html"><h3>Certifications</h3><p>LEGO Foundation, Raspberry Pi Foundation, EdTech Hub and more.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
-        <a class="explore-card" href="community.html"><h3>Volunteer work</h3><p>STEM mentoring and advisory roles.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
+        <a class="explore-card" href="community.html"><h3>Volunteer work</h3><p>300+ girls reached in STEM with WiSSAfrica, and Deaf inclusion with Ishara Foundation.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
   </section>
@@ -313,7 +331,7 @@
   </div>
 </footer>
 
-<script src="main.js?v=20261124j" defer></script>
-<script src="chatbot.js?v=20261124j" defer></script>
+<script src="main.js?v=20261124k" defer></script>
+<script src="chatbot.js?v=20261124k" defer></script>
 </body>
 </html>

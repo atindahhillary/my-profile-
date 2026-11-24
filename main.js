@@ -194,7 +194,7 @@
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0, rootMargin: '0px 0px -10% 0px' }
   );
 
   revealTargets.forEach(function (el) { observer.observe(el); });
@@ -210,9 +210,10 @@
   var S = {
     founder: ['Building something for learners in hard-to-reach places? I design programmes and build the tools behind them, from Enkaji Play to Jamii Learn. Let us pressure-test your idea.', 'Pitch me your idea', M + 'Founder%3A%20'],
     ceo: ['Need a digital or EdTech programme that stands up to board and funder scrutiny? I build the delivery, the partnerships and the MEAL together, so the results hold.', 'Start the conversation', M + 'CEO%3A%20'],
+    funder: ['Holding a grant for a hard-to-reach region and need a partner who can evidence the outcome? I run programmes on a KES 25M annual budget with weekly partner and monthly donor reporting.', 'Discuss a partnership', M + 'Funder%3A%20'],
     recruiter: ['Hiring a programme lead for digital transformation, EdTech or AI in education? The CV is one tap away, and I am happy to talk through any role.', 'Download my CV', 'Hillary-Atindah-George-Resume.pdf'],
     fellowship: ['Selecting leaders for an EdTech, AI or social impact fellowship? Start with the work: an IT Academy for pastoralist youth, 23+ schools, and tools mothers use at home.', 'See the selected work', '#work'],
-    startup: ['An EdTech or AI startup heading into African classrooms? I help you design pilots, train teachers and prove impact before you scale.', 'Talk about a pilot', M + 'Startup%3A%20'],
+    startup: ['Piloting in African schools? I design the pilot, train the teachers and set up the measurement, so your first data is ready for your board.', 'Talk about a pilot', M + 'Startup%3A%20'],
     curious: ['Welcome. My bot knows the whole profile and answers in seconds. Ask it anything.', 'Ask the bot', '#bot']
   };
   box.querySelectorAll('[data-who]').forEach(function (b) {
@@ -251,8 +252,12 @@
     box.classList.add('is-orbiting'); place();
     if (!still) raf = requestAnimationFrame(tick);
   }
+  var btn = wrap.querySelector('.orbit-pause'), held = false;
+  if (btn) btn.addEventListener('click', function () { held = !held; paused = held; btn.setAttribute('aria-pressed', String(held)); btn.textContent = held ? 'Play' : 'Pause'; });
   wrap.addEventListener('mouseenter', function () { paused = true; });
-  wrap.addEventListener('mouseleave', function () { paused = false; });
+  wrap.addEventListener('mouseleave', function () { paused = held; });
+  wrap.addEventListener('focusin', function () { paused = true; });
+  wrap.addEventListener('focusout', function () { paused = held; });
   document.addEventListener('visibilitychange', function () { last = 0; });
   (wide.addEventListener ? wide.addEventListener('change', setup) : wide.addListener(setup));
   window.addEventListener('resize', function () { if (wide.matches) place(); });
