@@ -61,7 +61,7 @@
       id: 'aiedu',
       re: /\bai\b.*\b(teach|teacher|school|education|classroom)|co.?design/,
       keys: ['use ai', 'ai with', 'co-design', 'codesign', 'co design', 'teach for kenya', 'edtech east africa', 'anthropic', 'ai in education', 'ai for teachers', 'ecosystem', 'offline excel', 'excel tool'],
-      reply: "He trains and co-designs with teachers, school leaders and other ecosystem builders so AI becomes a classroom companion. At a co-design session with EdTech East Africa, Teach For Kenya and Anthropic, one teacher with no internet built an offline Excel tool that fixes attendance tracking, lesson prep and assessments. That is the model: teachers bring a real challenge from their own classroom and leave with a working solution they built. When a problem needs more than a spreadsheet, he builds the tool himself.",
+      reply: "He trains and co-designs with teachers, school leaders and other ecosystem builders so AI becomes a classroom companion. At a teacher AI co-design session run by Anthropic, with EdTech East Africa and Teach For Kenya, one teacher with no internet built an offline Excel tool that fixes attendance tracking, lesson prep and assessments. That is the model: teachers bring a real challenge from their own classroom and leave with a working solution they built. When a problem needs more than a spreadsheet, he builds the tool himself.",
       link: { href: 'experience.html', label: 'Read the story' },
       chips: ['What has he built?', 'What about AI?', 'Can I hire him?']
     },

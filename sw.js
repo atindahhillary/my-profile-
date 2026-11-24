@@ -7,7 +7,7 @@
  *
  * Bump VERSION when CORE changes, so old caches are cleared.
  */
-var VERSION = 'v11-20261124';
+var VERSION = 'v12-20261124';
 var CACHE = 'hillary-profile-' + VERSION;
 var CORE = [
   './', 'index.html', 'about.html', 'experience.html', 'skills.html',
