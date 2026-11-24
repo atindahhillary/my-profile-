@@ -30,7 +30,7 @@
 <link rel="preload" as="image" href="hero-headshot.jpg" fetchpriority="high">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css?v=20261124f">
+<link rel="stylesheet" href="style.css?v=20261124g">
 
 <script type="application/ld+json">
 {
@@ -117,9 +117,18 @@
         <h1>Hillary Atindah George</h1>
         <p class="role-line">Digital Transformation, EdTech and Technology Programme Leader</p>
         <p class="hero-summary"><strong>Programmes that reach the last school, and prove it.</strong> I design and lead digital learning programmes for schools and young people in low-resource settings, with AI tools, cybersecurity safeguards and data systems built in from day one. Five years since 2021, nearly three of them leading education programmes.</p>
-        <ul class="hero-pillars" aria-label="Supporting capabilities">
-          <li>AI and digital innovation</li><li>Cybersecurity and digital safety</li><li>Data and impact measurement</li><li>Programme design and delivery</li>
-        </ul>
+        <div class="starter" id="starter">
+          <p class="starter-q">Who's visiting? Tap one and I'll tell you where to start.</p>
+          <div class="starter-chips" role="group" aria-label="I am a">
+            <button type="button" data-who="founder" aria-pressed="false">Founder</button>
+            <button type="button" data-who="ceo" aria-pressed="false">CEO</button>
+            <button type="button" data-who="recruiter" aria-pressed="false">Recruiter</button>
+            <button type="button" data-who="fellowship" aria-pressed="false">Fellowship</button>
+            <button type="button" data-who="startup" aria-pressed="false">Startup</button>
+            <button type="button" data-who="curious" aria-pressed="false">Just curious</button>
+          </div>
+          <div class="starter-out" aria-live="polite"><p>Every good programme I have run started with one conversation. Pick who you are and let's start ours.</p></div>
+        </div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="contact.html">Get in touch</a>
           <a class="btn btn-ghost" href="work.html">Work with me</a>
@@ -140,11 +149,12 @@
         <svg class="avatar-ring" viewBox="0 0 220 220" aria-hidden="true">
           <circle cx="110" cy="110" r="104" fill="none" stroke="#F2A65A" stroke-width="2" stroke-dasharray="4 10"/>
         </svg>
-        <div class="orbits">
-          <span class="orbit o1" title="AI and digital innovation"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2.5"/><path d="M9 2.5v3M15 2.5v3M9 18.5v3M15 18.5v3M2.5 9h3M2.5 15h3M18.5 9h3M18.5 15h3"/><path d="M10 10h4v4h-4z"/></svg><span class="visually-hidden">AI and digital innovation</span></span>
-          <span class="orbit o2" title="Cybersecurity and digital safety"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 4.5 5.6v5.6c0 4.6 3.2 8.6 7.5 9.9 4.3-1.3 7.5-5.3 7.5-9.9V5.6L12 2.8z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/></svg><span class="visually-hidden">Cybersecurity and digital safety</span></span>
-          <span class="orbit o3" title="Data and impact measurement"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-7M21 20H3"/></svg><span class="visually-hidden">Data and impact measurement</span></span>
-          <span class="orbit o4" title="Programme design and delivery"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></svg><span class="visually-hidden">Programme design and delivery</span></span>
+        <div class="orbits" aria-label="Capabilities">
+          <span class="orbit o1"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></svg></span><span class="orbit-label">Programme design</span></span>
+          <span class="orbit o2"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2.5"/><path d="M9 2.5v3M15 2.5v3M9 18.5v3M15 18.5v3M2.5 9h3M2.5 15h3M18.5 9h3M18.5 15h3"/><path d="M10 10h4v4h-4z"/></svg></span><span class="orbit-label">AI &amp; innovation</span></span>
+          <span class="orbit o3"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="8" r="3"/><path d="M2.5 20c0-3.2 2.4-5.5 5.5-5.5s5.5 2.3 5.5 5.5M11 14.9c1-.6 2.2-.9 3.5-.9 3.2 0 5.5 2.3 5.5 6"/></svg></span><span class="orbit-label">Partnerships</span></span>
+          <span class="orbit o4"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-7M21 20H3"/></svg></span><span class="orbit-label">MEAL &amp; impact</span></span>
+          <span class="orbit o5"><span class="orbit-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 4.5 5.6v5.6c0 4.6 3.2 8.6 7.5 9.9 4.3-1.3 7.5-5.3 7.5-9.9V5.6L12 2.8z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/></svg></span><span class="orbit-label">Cybersecurity</span></span>
         </div>
       </div>
     </div>
@@ -229,7 +239,7 @@
           <div class="tl-project-body">
             <h3 class="tl-project-title">Meet the graduates</h3>
             <span>The HPF Talent Hub: academy trainees' profiles for employers.</span>
-            <span class="tl-tags">Data and impact &middot; Live site</span>
+            <span class="tl-tags">MEAL and impact &middot; Live site</span>
             <em>Open the Talent Hub<span class="abot-sr"> (opens in a new tab)</span></em>
           </div>
         </a>
@@ -239,7 +249,7 @@
   <!-- WAYS TO WORK TOGETHER -->
   <section class="section ways" id="ways">
     <div class="container">
-      <p class="section-kicker">Ways to work together</p>
+      <p class="section-kicker" id="ways-kicker">Ways to work together</p>
       <h2 class="section-title">Hire me, bring me in, or build with me.</h2>
       <p class="section-lede">A full-time role, a consulting brief or a programme to build together: pick the door that fits.</p>
       <p class="avail-pill"><span class="avail-dot" aria-hidden="true"></span>Open for conversations: roles, consulting and partnerships</p>
@@ -274,7 +284,7 @@
       <h2 class="section-kicker">More of the profile</h2>
       <div class="explore-grid explore-grid-compact">
         <a class="explore-card" href="experience.html"><h3>Experience</h3><p>Five years since 2021, by type.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
-        <a class="explore-card" href="skills.html"><h3>Skills</h3><p>The four capabilities behind the work.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
+        <a class="explore-card" href="skills.html"><h3>Skills</h3><p>The five capabilities behind the work.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
         <a class="explore-card" href="about.html"><h3>About</h3><p>How I work, and why.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
         <a class="explore-card" href="achievements.html"><h3>Achievements</h3><p>Recognition and judged competitions.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
         <a class="explore-card" href="certifications.html"><h3>Certifications</h3><p>LEGO Foundation, Raspberry Pi Foundation, EdTech Hub and more.</p><span class="explore-go" aria-hidden="true">&rarr;</span></a>
@@ -303,7 +313,7 @@
   </div>
 </footer>
 
-<script src="main.js?v=20261124f" defer></script>
-<script src="chatbot.js?v=20261124f" defer></script>
+<script src="main.js?v=20261124g" defer></script>
+<script src="chatbot.js?v=20261124g" defer></script>
 </body>
 </html>

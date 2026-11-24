@@ -1838,3 +1838,40 @@ body.subpage .site-header .brand span { color: #a4501a; }
 .tl-project-body em { margin-top: auto; }
 .home-work .tl-project img { background: var(--teal-900); }
 .contact-section .location-line { max-width: 760px; margin-inline: auto; }
+
+/* ---------- Labelled capability orbit ---------- */
+.hero-avatar-wrap { min-height: 380px; }
+.orbit { width: auto; height: auto; padding: 6px 12px 6px 6px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; background: var(--white); }
+.orbit-ic { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: rgba(22,78,69,0.1); flex: none; }
+.orbit svg { width: 17px; height: 17px; }
+.orbit-label { font-size: 0.78rem; font-weight: 700; color: var(--teal-900); white-space: nowrap; }
+.orbit.o1 { top: 4%; left: 0; right: auto; bottom: auto; }
+.orbit.o2 { top: 4%; right: 0; left: auto; bottom: auto; }
+.orbit.o3 { top: 46%; left: -18px; right: auto; bottom: auto; animation-delay: -1.8s; }
+.orbit.o4 { bottom: 4%; left: 0; right: auto; top: auto; animation-delay: -2.6s; }
+.orbit.o5 { bottom: 4%; right: 0; left: auto; top: auto; animation-delay: -3.4s; }
+.orbit.o2 svg, .orbit.o4 svg { stroke: #a4501a; }
+@media (max-width: 960px) {
+  .hero-avatar-wrap { flex-direction: column; min-height: 0; gap: 14px; }
+  .orbits { position: static; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; max-width: 360px; }
+  .orbit, .orbit.o1, .orbit.o2, .orbit.o3, .orbit.o4, .orbit.o5 { position: static; animation: none; width: auto; height: auto; padding: 4px 10px 4px 4px; }
+  .orbit-ic { width: 24px; height: 24px; }
+  .orbit svg { width: 14px; height: 14px; }
+  .orbit-label { font-size: 0.72rem; }
+  .avatar-ring { display: none; }
+}
+
+/* ---------- Hero conversation starter ---------- */
+.starter { margin: 6px 0 24px; padding: 16px 18px; border-radius: 16px; background: rgba(255,255,255,0.07); border: 1px solid rgba(242,166,90,0.3); max-width: 560px; }
+.starter-q { margin: 0 0 10px; font-size: 0.86rem; font-weight: 600; color: var(--amber); }
+.starter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.starter-chips button { font: inherit; font-size: 0.84rem; font-weight: 600; padding: 7px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.35); background: transparent; color: var(--white); cursor: pointer; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
+.starter-chips button:hover { border-color: var(--amber); }
+.starter-chips button[aria-pressed="true"] { background: var(--amber); border-color: var(--amber); color: var(--teal-900); }
+.starter-out { margin-top: 12px; font-size: 0.92rem; line-height: 1.6; color: rgba(255,255,255,0.88); min-height: 3.2em; }
+.starter-out p { margin: 0 0 8px; }
+.starter-go { font-weight: 700; color: var(--amber); }
+.starter-go:hover { text-decoration: underline; }
+
+/* five skill cards */
+.skills-grid-4 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }

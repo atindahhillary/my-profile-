@@ -203,6 +203,32 @@
 // Close the More menu when keyboard focus leaves it
 (function(){var nm=document.getElementById('navMore'),nb=document.getElementById('navMoreBtn');if(!nm||!nb)return;nm.addEventListener('focusout',function(e){if(!nm.contains(e.relatedTarget)){nm.classList.remove('open');nb.setAttribute('aria-expanded','false');}});})();
 
+// Hero conversation starter: a tailored opener per visitor type
+(function () {
+  var box = document.getElementById('starter'); if (!box) return;
+  var out = box.querySelector('.starter-out'), M = 'mailto:atindahhillary@gmail.com?subject=';
+  var S = {
+    founder: ['Building something for learners in hard-to-reach places? I design programmes and build the tools behind them, from Enkaji Play to Jamii Learn. Let us pressure-test your idea.', 'Pitch me your idea', M + 'Founder%3A%20'],
+    ceo: ['Need a digital or EdTech programme that stands up to board and funder scrutiny? I build the delivery, the partnerships and the MEAL together, so the results hold.', 'Start the conversation', M + 'CEO%3A%20'],
+    recruiter: ['Hiring a programme lead for digital transformation, EdTech or AI in education? The CV is one tap away, and I am happy to talk through any role.', 'Download my CV', 'Hillary-Atindah-George-Resume.pdf'],
+    fellowship: ['Selecting leaders for an EdTech, AI or social impact fellowship? Start with the work: an IT Academy for pastoralist youth, 23+ schools, and tools mothers use at home.', 'See the selected work', '#work'],
+    startup: ['An EdTech or AI startup heading into African classrooms? I help you design pilots, train teachers and prove impact before you scale.', 'Talk about a pilot', M + 'Startup%3A%20'],
+    curious: ['Welcome. My bot knows the whole profile and answers in seconds. Ask it anything.', 'Ask the bot', '#bot']
+  };
+  box.querySelectorAll('[data-who]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var s = S[b.dataset.who]; if (!s) return;
+      box.querySelectorAll('[data-who]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      out.innerHTML = '';
+      var p = document.createElement('p'); p.textContent = s[0];
+      var a = document.createElement('a'); a.className = 'starter-go'; a.textContent = s[1] + ' \u2192'; a.href = s[2];
+      if (s[2] === 'Hillary-Atindah-George-Resume.pdf') a.setAttribute('download', '');
+      if (s[2] === '#bot') a.addEventListener('click', function (e) { e.preventDefault(); var l = document.getElementById('abotLauncher'); if (l) l.click(); });
+      out.appendChild(p); out.appendChild(a);
+    });
+  });
+})();
+
 // Offline support: saves the site and the bot so both work without a connection (see sw.js)
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });

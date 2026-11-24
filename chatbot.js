@@ -91,7 +91,7 @@
     {
       id: 'skills',
       keys: ['skill', 'skills', 'competenc', 'good at', 'expertise', 'strengths', 'capabilit', 'what can he do', 'toolkit'],
-      reply: "One role, four capabilities: AI and digital innovation, cybersecurity and digital safety, data and impact measurement, and programme design and delivery. Underneath sit teacher training and coaching, cohort management, safeguarding and field operations.",
+      reply: "One role, five capabilities: programme design and delivery, AI and digital innovation, partnerships and stakeholder engagement, MEAL and impact measurement, and cybersecurity and digital safety. Underneath sit teacher training and coaching, cohort management, safeguarding and field operations.",
       link: { href: 'skills.html', label: 'See all competencies' },
       chips: ['Tell me about the cybersecurity work', 'What about AI?', 'How does he measure impact?']
     },
@@ -114,7 +114,7 @@
       id: 'me',
       keys: ['measure', 'm&e', 'mel', 'monitoring', 'evaluation', 'data', 'salesforce', 'power bi', 'reporting', 'dashboard', 'kpi', 'donor report'],
       reply: "He sets up the measurement as well as the delivery. Salesforce CRM and Power BI pipelines, KPI frameworks, donor analytics and data-protection compliance. At SELution he designed per-child measurement that rolls up to cluster dashboards. Weekly executive reports and monthly consolidated donor reports are part of the current role.",
-      link: { href: 'skills.html', label: 'See the four capabilities' },
+      link: { href: 'skills.html', label: 'See the five capabilities' },
       chips: ['Can I hire him?', 'Show me the numbers', 'What are his skills?']
     },
     {
