@@ -1895,3 +1895,6 @@ body.subpage .site-header .brand span { color: #a4501a; }
   .orbit, .orbit.o1, .orbit.o2, .orbit.o3, .orbit.o4, .orbit.o5 { position: static; animation: none; padding: 4px 10px 4px 4px; }
   .avatar-ring { display: none; }
 }
+
+/* co-design photo is now a true 3:2 landscape */
+.tl-media-portrait img { aspect-ratio: 3 / 2; object-position: center; }
