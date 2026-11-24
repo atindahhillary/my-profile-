@@ -33,7 +33,7 @@
     {
       id: 'who',
       keys: ['who', 'what does he do', 'what do you do', 'about', 'background', 'profile', 'summary', 'introduce', 'bio'],
-      reply: "Hillary is a digital transformation, EdTech and technology programme leader based in Nairobi. Over five years he has designed and run digital programmes in underserved Kenya, training 798+ teachers across 23+ schools and reaching 5,000+ learners. He builds AI, data and cybersecurity into the work so results can be proven and protected.",
+      reply: "Programmes that reach the last school, and prove it. Hillary is a digital transformation, EdTech and technology programme leader in Nairobi. He designs and leads digital learning programmes for schools and young people in low-resource settings, with AI tools, cybersecurity safeguards and data systems built in. Over five years he has trained 798+ teachers across 23+ schools and reached 5,000+ learners.",
       link: { href: 'about.html', label: 'Read the full About page' },
       chips: ['What is he working on now?', 'Show me the numbers', 'What are his skills?']
     },
