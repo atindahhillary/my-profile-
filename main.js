@@ -200,6 +200,9 @@
   revealTargets.forEach(function (el) { observer.observe(el); });
 })();
 
+// Close the More menu when keyboard focus leaves it
+(function(){var nm=document.getElementById('navMore'),nb=document.getElementById('navMoreBtn');if(!nm||!nb)return;nm.addEventListener('focusout',function(e){if(!nm.contains(e.relatedTarget)){nm.classList.remove('open');nb.setAttribute('aria-expanded','false');}});})();
+
 // Offline support: saves the site and the bot so both work without a connection (see sw.js)
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
