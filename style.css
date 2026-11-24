@@ -1816,3 +1816,25 @@ body.subpage .site-header .brand span { color: #a4501a; }
 .ig-bar { grid-template-columns: 96px 1fr 52px; font-size: 0.88rem; }
 .ig-bar.is-rating i::after { background: var(--amber); }
 .ig-seg { font-size: 0.82rem; }
+
+/* ---------- Availability: open for conversations ---------- */
+.avail-pill { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 16px; padding: 7px 14px 7px 12px; border-radius: 999px; font-size: 0.84rem; font-weight: 600; background: rgba(46,160,103,0.12); color: #1b6b45; border: 1px solid rgba(46,160,103,0.35); }
+.contact-section .avail-pill, .section-kicker-light ~ .avail-pill { background: rgba(127,216,163,0.12); color: #bff0d2; border-color: rgba(127,216,163,0.4); }
+.avail-dot { position: relative; width: 10px; height: 10px; border-radius: 50%; background: #2ea067; flex: none; }
+.avail-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #2ea067; animation: avail-ping 1.8s ease-out infinite; }
+@keyframes avail-ping { from { transform: scale(1); opacity: 0.7; } to { transform: scale(2.6); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .avail-dot::after { animation: none; } }
+.ways .avail-pill { display: flex; width: fit-content; }
+
+/* ---------- Alignment and flow fixes ---------- */
+.trust-line + .section-lede { margin-top: 0; }
+.work-cta .prop-h2 { color: var(--white); margin-top: 0; }
+.work-cta .cond-list li { color: rgba(255,255,255,0.85); }
+.work-cta .cond-list li strong { color: var(--amber); }
+.ways .avail-pill { margin: -24px 0 28px; }
+.explore-card { display: flex; flex-direction: column; }
+.explore-grid-compact .explore-go { margin-top: auto; padding-top: 12px; }
+.tl-project-body { display: flex; flex-direction: column; }
+.tl-project-body em { margin-top: auto; }
+.home-work .tl-project img { background: var(--teal-900); }
+.contact-section .location-line { max-width: 760px; margin-inline: auto; }
