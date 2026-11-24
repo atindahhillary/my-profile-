@@ -128,7 +128,7 @@
       id: 'fit',
       re: /good fit|right fit|a fit\b|how (do|does) (you|he) work|what('| i)?s (your|his) (process|approach|rate|fee)|how much|cost|pricing|charge/,
       keys: ['fit for', 'process', 'approach', 'methodology', 'phases', 'how it works', 'rate', 'rates', 'fees', 'pricing', 'cost', 'charge', 'scope'],
-      reply: "He is looking for a full-time leadership role from January 2027 and takes only selected consulting on AI in education. Email him to talk about either.",
+      reply: "Engagements run as short advisory sprints or full delivery, and collaborations are shaped together. Scope and fees are set per engagement after a short diagnostic, so there is no rate card. Email him to start the conversation.",
       link: { href: 'contact.html', label: 'Get in touch' },
       chips: ['Can I hire him?', 'Show me the numbers', 'How do I reach him?']
     },
@@ -164,8 +164,8 @@
     {
       id: 'hire',
       keys: ['hire', 'hiring', 'work with', 'consult', 'engage', 'available', 'services', 'freelance', 'contract', 'partner', 'collaborat', 'recruit', 'job', 'opportunit'],
-      reply: "Yes. He is open to full-time leadership roles in digital transformation, EdTech and technology programmes across East Africa from January 2027, and takes selected consulting on AI in education. He is Nairobi-based and open to fieldwork and rural travel.",
-      link: { href: 'contact.html', label: 'Get in touch' },
+      reply: "Yes, in three ways. Hire him: full-time leadership of digital transformation, EdTech and AI for education programmes. Bring him in: consulting on programme design, impact measurement, teacher training, AI adoption and digital safety. Build with him: collaborations to design and run programmes with NGOs, schools, funders and EdTech teams. Nairobi based, remote or on site. The first step is a short conversation, then a brief written diagnostic. Email him with Role, Consulting or Partnership in the subject line.",
+      link: { href: 'proposal.html', label: 'How an engagement runs' },
       chips: ['How do I reach him?', 'How does he measure impact?', 'Show me the numbers']
     },
     {
