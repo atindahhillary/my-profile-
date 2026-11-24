@@ -229,6 +229,36 @@
   });
 })();
 
+// Capability orbit: five labelled pills travel clockwise around the headshot (desktop)
+(function () {
+  var wrap = document.querySelector('.hero-avatar-wrap'), box = wrap && wrap.querySelector('.orbits'); if (!box) return;
+  var pills = [].slice.call(box.querySelectorAll('.orbit')), wide = window.matchMedia('(min-width: 1200px)');
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches, angle = -90, last = 0, paused = false, raf = 0;
+  function place() {
+    var W = wrap.clientWidth, H = wrap.clientHeight, cx = W / 2, cy = H / 2;
+    var half = Math.max.apply(null, pills.map(function (p) { return p.offsetWidth / 2; })), hh = pills[0].offsetHeight / 2;
+    var av = wrap.querySelector('.hero-avatar'), R = (av ? av.offsetWidth / 2 : 110) + 12;
+    var rx = R + half + 14, ry = R + hh + 30; // always clear of the photo
+    pills.forEach(function (p, i) {
+      var a = (angle + i * 72) * Math.PI / 180;
+      p.style.transform = 'translate(' + (cx + rx * Math.cos(a) - p.offsetWidth / 2).toFixed(1) + 'px,' + (cy + ry * Math.sin(a) - p.offsetHeight / 2).toFixed(1) + 'px)';
+    });
+  }
+  function tick(t) { if (last && !paused) angle = (angle + (t - last) * 0.006) % 360; last = t; place(); raf = requestAnimationFrame(tick); }
+  function setup() {
+    cancelAnimationFrame(raf); last = 0;
+    if (!wide.matches) { box.classList.remove('is-orbiting'); pills.forEach(function (p) { p.style.transform = ''; }); return; }
+    box.classList.add('is-orbiting'); place();
+    if (!still) raf = requestAnimationFrame(tick);
+  }
+  wrap.addEventListener('mouseenter', function () { paused = true; });
+  wrap.addEventListener('mouseleave', function () { paused = false; });
+  document.addEventListener('visibilitychange', function () { last = 0; });
+  (wide.addEventListener ? wide.addEventListener('change', setup) : wide.addListener(setup));
+  window.addEventListener('resize', function () { if (wide.matches) place(); });
+  setup();
+})();
+
 // Offline support: saves the site and the bot so both work without a connection (see sw.js)
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
