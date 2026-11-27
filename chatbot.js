@@ -18,7 +18,7 @@
 (function () {
   'use strict';
 
-  var NAME = 'ATINDLET BOT';
+  var NAME = 'Hillary’s Assistant';
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ---------------------------------------------------------------- knowledge
