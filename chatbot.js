@@ -53,7 +53,7 @@
     {
       id: 'experience',
       keys: ['experience', 'career', 'history', 'before', 'previous', 'past', 'worked', 'roles', 'journey', 'lewa', 'alatpres', 'selution'],
-      reply: "Ten years across four sectors. Before the academy he built the Mt Kenya school digital literacy programme from zero across 23+ partner schools. Earlier: Assistant Financial Accountant and ICT Support at Lewa Wildlife Conservancy, and backend engineer at Alatpres Technologies on platforms serving 50,000+ users. He also co-leads programme design at SELution, a regional play-based learning initiative.",
+      reply: "Seven years across four sectors. Before the academy he built the Mt Kenya school digital literacy programme from zero across 23+ partner schools. Earlier: Assistant Financial Accountant and ICT Support at Lewa Wildlife Conservancy, and backend engineer at Alatpres Technologies on platforms serving 50,000+ users. He also co-leads programme design at SELution, a regional play-based learning initiative.",
       link: { href: 'experience.html', label: 'Open the timeline' },
       chips: ['What is he working on now?', 'What are his skills?', 'What has he been certified in?']
     },
