@@ -18,7 +18,7 @@
 (function () {
   'use strict';
 
-  var NAME = 'Hillary\u2019s assistant';
+  var NAME = 'ATINDLET BOT';
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ---------------------------------------------------------------- knowledge
@@ -33,27 +33,27 @@
     {
       id: 'who',
       keys: ['who', 'what does he do', 'what do you do', 'about', 'background', 'profile', 'summary', 'introduce', 'bio'],
-      reply: "Programmes that reach the last school, and prove it. Hillary is a digital transformation, EdTech and technology programme leader in Nairobi. He designs and leads digital learning programmes for schools and young people in low-resource settings, with AI tools, cybersecurity safeguards and data systems built in. Over five years he has trained 798+ teachers across 23+ schools and reached 5,000+ learners.",
+      reply: "Hillary is a STEM, EdTech and digital transformation leader based in Nairobi. He designs digital skills and STEM pathways that move people into paid work, then builds the data, AI and security systems that prove the result. The range runs across education, conservation, finance and software.",
       link: { href: 'about.html', label: 'Read the full About page' },
       chips: ['What is he working on now?', 'Show me the numbers', 'What are his skills?']
     },
     {
       id: 'impact',
       keys: ['numbers', 'impact', 'results', 'metrics', 'stats', 'reach', 'how many', 'evidence', 'proof', 'outcomes'],
-      reply: "The headline figures: 5,000+ learners reached, 798+ teachers trained across 23+ schools, a 95% pass rate in the most recent cohort, 20 fellows in mentoring right now, 300+ girls reached through STEM mentorships, and a KES 25M annual programme budget.",
+      reply: "The headline figures: 5,000+ learners reached, 798+ teachers trained across 23+ schools, a 95% pass rate in the most recent cohort, 20 fellows in mentoring right now, 300+ girls mentored into STEM, and a KES 25M annual programme budget under management. Backend platforms he built earlier serve 50,000+ users.",
       chips: ['Tell me about the academy', 'How does he measure impact?', 'Can I hire him?']
     },
     {
       id: 'current',
       keys: ['now', 'current', 'currently', 'present', 'today', 'latest role', 'working on', 'hpf', 'academy', 'fellowship', 'mara', 'maasai', 'aitong', 'designed', 'who built', 'who created', 'fellows', 'trainees'],
-      reply: "He leads the HPF IT Academy in Aitong, Maasai Mara, as Skills Development Programme Lead (contract title IT Officer) on a 2026 contract. It is a learn-to-earn fellowship for pastoralist youth across three tracks: web development, cybersecurity and data analytics. Fellows arrive having never used a computer and leave working in the field they trained in. A cohort of 26 fellows came all the way through to paid work online: 95% passed, 86% finished, graduates now earn verified income on digital work platforms, and the cohort rated the programme 4.1/5. He is mentoring 20 fellows in the live cohort, 11 in full-stack development (MERN) and 9 in data analytics and AI, who build for problems in their own community: climate change, employability and mental health. The programme runs on a KES 25M annual budget.",
+      reply: "He designed and leads the HPF ICT Academy in Aitong, Maasai Mara as Skills Development Program Lead. It is a learn-to-earn fellowship for pastoralist youth across three tracks: web development, cybersecurity and data analytics. Fellows arrive having never used a computer and leave working in the field they trained in. A cohort of 26 fellows came all the way through to paid work online: 95% passed, 86% finished, graduates now earn verified income on digital work platforms, and the cohort rated the programme 4.1/5. He is mentoring 20 fellows in the live cohort, 11 in full-stack development (MERN) and 9 in data analytics and AI, who build for problems in their own community: climate change, employability and mental health. He manages the KES 25M annual budget behind it.",
       link: { href: 'experience.html', label: 'See the full experience' },
       chips: ['What did he do before?', 'How does he measure impact?', 'Can I hire him?']
     },
     {
       id: 'experience',
-      keys: ['experience', 'career', 'history', 'before', 'previous', 'past', 'worked', 'roles', 'journey', 'lewa', 'selution'],
-      reply: "About five years of work since 2021. Employment: Skills Development Programme Lead at the HPF IT Academy (2026 contract, title IT Officer), Digital Literacy Program Manager for the Mt Kenya region (Mar 2024 to Dec 2025, 798+ teachers across 23+ schools), and Assistant Financial Accountant and ICT Support at Lewa Wildlife Conservancy (Nov 2021 to Dec 2023). Separately, he consults on AI in education and co-leads programme design at SELution, and builds his own tools such as Enkaji Play.",
+      keys: ['experience', 'career', 'history', 'before', 'previous', 'past', 'worked', 'roles', 'journey', 'lewa', 'alatpres', 'selution'],
+      reply: "Ten years across four sectors. Before the academy he built the Mt Kenya school digital literacy programme from zero across 23+ partner schools. Earlier: Assistant Financial Accountant and ICT Support at Lewa Wildlife Conservancy, and backend engineer at Alatpres Technologies on platforms serving 50,000+ users. He also co-leads programme design at SELution, a regional play-based learning initiative.",
       link: { href: 'experience.html', label: 'Open the timeline' },
       chips: ['What is he working on now?', 'What are his skills?', 'What has he been certified in?']
     },
@@ -61,14 +61,14 @@
       id: 'aiedu',
       re: /\bai\b.*\b(teach|teacher|school|education|classroom)|co.?design/,
       keys: ['use ai', 'ai with', 'co-design', 'codesign', 'co design', 'teach for kenya', 'edtech east africa', 'anthropic', 'ai in education', 'ai for teachers', 'ecosystem', 'offline excel', 'excel tool'],
-      reply: "He trains and co-designs with teachers, school leaders and other ecosystem builders so AI becomes a classroom companion. At a teacher AI co-design session run by Anthropic, with EdTech East Africa and Teach For Kenya, one teacher with no internet built an offline Excel tool that fixes attendance tracking, lesson prep and assessments. That is the model: teachers bring a real challenge from their own classroom and leave with a working solution they built. When a problem needs more than a spreadsheet, he builds the tool himself.",
+      reply: "He trains and co-designs with teachers, school leaders and other ecosystem builders so AI becomes a companion in the classroom rather than something to fear. At a co-design session with EdTech East Africa, Teach For Kenya and Anthropic, one teacher with no internet built an offline Excel tool that fixes attendance tracking, lesson prep and assessments. That is the model: teachers bring a real challenge from their own classroom and leave with a working solution they built. When a problem needs more than a spreadsheet, he builds the tool himself.",
       link: { href: 'experience.html', label: 'Read the story' },
       chips: ['What has he built?', 'What about AI?', 'Can I hire him?']
     },
     {
       id: 'built',
       keys: ['built', 'build', 'projects', 'products', 'apps', 'tools', 'portfolio', 'solutions', 'made', 'demo'],
-      reply: "Three tools he designed and built himself, outside his jobs. Enkaji Play brings Six Bricks play to the family phone for Mothers Who Teach in Sekenani. Jamii Learn Companion helps herders and parents learn carbon markets on their own phone, in Kiswahili or English, through a conversation they can listen to. maas.AI GRC Hub gives schools, NGOs and small businesses a workspace to run security tests, see what to fix first, and hand partners signed proof instead of a claim. Both are open to try.",
+      reply: "Two live tools. Jamii Learn Companion helps herders and parents learn carbon markets on their own phone, in Kiswahili or English, through a conversation they can listen to. maas.AI GRC Hub gives schools, NGOs and small businesses a workspace to run security tests, see what to fix first, and hand partners signed proof instead of a claim. Both are open to try.",
       link: { href: 'experience.html', label: 'See both on the Experience page' },
       chips: ['Tell me about Jamii Learn', 'Tell me about maas.AI', 'What about AI?']
     },
@@ -91,7 +91,7 @@
     {
       id: 'skills',
       keys: ['skill', 'skills', 'competenc', 'good at', 'expertise', 'strengths', 'capabilit', 'what can he do', 'toolkit'],
-      reply: "One role, five capabilities: programme design and delivery, AI and digital innovation, partnerships and stakeholder engagement, MEAL and impact measurement, and cybersecurity and digital safety. Underneath sit teacher training and coaching, cohort management, safeguarding and field operations.",
+      reply: "Six areas: programme design and delivery, data and M&E reporting, AI automation and ML, cybersecurity and digital safety, partnerships and stakeholders, and grants and proposal writing. Underneath those sit fellowship and cohort management, Trainer of Trainers, field operations, safeguarding and data protection.",
       link: { href: 'skills.html', label: 'See all competencies' },
       chips: ['Tell me about the cybersecurity work', 'What about AI?', 'How does he measure impact?']
     },
@@ -106,7 +106,7 @@
       id: 'ai',
       re: /\bai\b|artificial intelligence|machine learning/,
       keys: ['ai', 'artificial intelligence', 'automation', 'machine learning', 'ml', 'llm', 'ai literacy', 'deepmind'],
-      reply: "AI-assisted learning platforms, workflow automation, and AI literacy curricula built for low-bandwidth, low-device classrooms. He is certified in Experience AI from the Raspberry Pi Foundation, developed with Google DeepMind, and took that straight into Kenyan classrooms so teachers can teach it themselves. At the academy, fellows on the AI track build solutions for local problems: climate change, employability and mental health. He also co-designs with teachers so they use AI in their own lessons, and builds practical tools like Jamii Learn Companion and maas.AI GRC Hub.",
+      reply: "AI-assisted learning platforms, workflow automation, and AI literacy curricula built for low-bandwidth, low-device classrooms. He is certified through Experience AI with the Raspberry Pi Foundation and Google DeepMind, and took that straight into Kenyan classrooms so teachers can teach it themselves. At the academy, fellows on the AI track build solutions for local problems: climate change, employability and mental health. He also co-designs with teachers so they use AI in their own lessons, and builds practical tools like Jamii Learn Companion and maas.AI GRC Hub.",
       link: { href: 'stem.html', label: 'See the STEM work' },
       chips: ['How does he use AI with teachers?', 'What has he built?', 'What has he been certified in?']
     },
@@ -114,13 +114,13 @@
       id: 'me',
       keys: ['measure', 'm&e', 'mel', 'monitoring', 'evaluation', 'data', 'salesforce', 'power bi', 'reporting', 'dashboard', 'kpi', 'donor report'],
       reply: "He sets up the measurement as well as the delivery. Salesforce CRM and Power BI pipelines, KPI frameworks, donor analytics and data-protection compliance. At SELution he designed per-child measurement that rolls up to cluster dashboards. Weekly executive reports and monthly consolidated donor reports are part of the current role.",
-      link: { href: 'skills.html', label: 'See the five capabilities' },
+      link: { href: 'work.html', label: 'See how engagements run' },
       chips: ['Can I hire him?', 'Show me the numbers', 'What are his skills?']
     },
     {
       id: 'stem',
       keys: ['stem', 'robot', 'robotics', 'olympiad', 'wro', 'girls', 'science', 'competition', 'wissafrica'],
-      reply: "He judges and runs national robotics competitions, two World Robot Olympiad seasons across 2024 and 2025 as judge, mentor and organiser. Through WiSSAfrica he has reached 300+ girls through STEM mentorships, and he has mentored 500+ primary and secondary students through school programmes and I Choose Life. The focus is the learners the sector usually skips: pastoralist, rural and low-resource classrooms.",
+      reply: "He judges and runs national robotics competitions, two World Robot Olympiad seasons across 2024 and 2025 as judge, mentor and organiser. Through WiSSAfrica he has reached 300+ girls with STEM mentorships, and 500+ students overall. The focus is the learners the sector usually skips: pastoralist, rural and low-resource classrooms.",
       link: { href: 'stem.html', label: 'Open the STEM page' },
       chips: ['What about AI?', 'What does he do in the community?', 'Show me the numbers']
     },
@@ -128,8 +128,8 @@
       id: 'fit',
       re: /good fit|right fit|a fit\b|how (do|does) (you|he) work|what('| i)?s (your|his) (process|approach|rate|fee)|how much|cost|pricing|charge/,
       keys: ['fit for', 'process', 'approach', 'methodology', 'phases', 'how it works', 'rate', 'rates', 'fees', 'pricing', 'cost', 'charge', 'scope'],
-      reply: "Engagements run as short advisory sprints or full delivery, and collaborations are shaped together. Scope and fees are set per engagement after a short diagnostic, so there is no rate card. Email him to start the conversation.",
-      link: { href: 'contact.html', label: 'Get in touch' },
+      reply: "There is a full proposal on the site: the problem he is usually called about, who the work suits and who it does not, the six phases an engagement runs through, and the conditions he designs for, meaning no reliable power, thin connectivity, shared devices and learners who have never switched on a computer. Scope and fees are set per engagement, after the diagnostic, so there is no rate card to quote. Email him and he will give you one.",
+      link: { href: 'proposal.html', label: 'Read the full proposal' },
       chips: ['Can I hire him?', 'Show me the numbers', 'How do I reach him?']
     },
     {
@@ -158,14 +158,14 @@
       id: 'teachers',
       keys: ['teacher', 'teaching', 'training', 'capacity', 'trainer of trainers', 'tot', 'classroom', 'curriculum', 'pedagog'],
       reply: "798+ teachers trained across 23+ schools, using a Trainer of Trainers model that scales past the workshop. He designed the curriculum himself and wrote the standard operating procedures behind the schools programme, grounded in Learning Through Play and Social Emotional Learning.",
-      link: { href: 'experience.html#mt-kenya', label: 'See the schools programme' },
+      link: { href: 'work.html', label: 'Teacher capacity building' },
       chips: ['Can I hire him?', 'Show me the numbers', 'What are his skills?']
     },
     {
       id: 'hire',
       keys: ['hire', 'hiring', 'work with', 'consult', 'engage', 'available', 'services', 'freelance', 'contract', 'partner', 'collaborat', 'recruit', 'job', 'opportunit'],
-      reply: "Yes, in three ways. Hire him: full-time leadership of digital transformation, EdTech and AI for education programmes. Bring him in: consulting on programme design, impact measurement, teacher training, AI adoption and digital safety. Build with him: collaborations to design and run programmes with NGOs, schools, funders and EdTech teams. Nairobi based, remote or on site. The first step is a short conversation, then a brief written diagnostic. Email him with Role, Consulting or Partnership in the subject line.",
-      link: { href: 'proposal.html', label: 'How an engagement runs' },
+      reply: "Yes. Founders, CEOs and programme leads bring him in when a digital skills or EdTech initiative has to stand up to scrutiny. Engagements run as short advisory sprints or full delivery: programme design and launch, impact measurement and reporting, teacher capacity building, AI and automation adoption. He is Nairobi-based, open to fieldwork and rural travel, on-site and hybrid.",
+      link: { href: 'proposal.html', label: 'Read the full proposal' },
       chips: ['How do I reach him?', 'How does he measure impact?', 'Show me the numbers']
     },
     {
@@ -192,8 +192,8 @@
     {
       id: 'funding',
       keys: ['budget', 'grant', 'proposal', 'funder', 'donor', 'fundrais', 'money', 'concept note', 'ingo'],
-      reply: "His current programme runs on a KES 25M annual budget, and he writes the funding behind the work: concept notes, donor proposals, budget development and impact reporting. He negotiated the Phase 2 partnership structure with Power Learn Project Africa, and reports weekly to partners and leadership.",
-      link: { href: 'experience.html', label: 'See the experience' },
+      reply: "He manages a KES 25M annual programme budget and writes the funding behind the work: concept notes, donor proposals, budget development and impact reporting. He negotiated the Phase 2 partnership structure with Power Learn Project Africa, and reports weekly to partners and leadership.",
+      link: { href: 'work.html', label: 'See consultancy options' },
       chips: ['How does he measure impact?', 'Can I hire him?', 'Show me the numbers']
     },
     {

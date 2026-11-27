@@ -7,12 +7,12 @@
  *
  * Bump VERSION when CORE changes, so old caches are cleared.
  */
-var VERSION = 'v13-20261124';
+var VERSION = 'v2-20261121';
 var CACHE = 'hillary-profile-' + VERSION;
 var CORE = [
-  './', 'index.html', 'about.html', 'experience.html', 'skills.html',
-  'stem.html', 'achievements.html', 'certifications.html', 'community.html',
-  'work.html', 'proposal.html', 'contact.html', '404.html', 'style.css', 'main.js', 'chatbot.js', 'hero-headshot.jpg',
+  './', 'index.html', 'about.html', 'experience.html', 'proposal.html', 'skills.html',
+  'stem.html', 'achievements.html', 'certifications.html', 'community.html', 'work.html',
+  'contact.html', '404.html', 'style.css', 'main.js', 'chatbot.js', 'hero-headshot.jpg',
   'Hillary-Atindah-George-Resume.pdf'
 ];
 

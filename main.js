@@ -194,74 +194,10 @@
         }
       });
     },
-    { threshold: 0, rootMargin: '0px 0px -10% 0px' }
+    { threshold: 0.15 }
   );
 
   revealTargets.forEach(function (el) { observer.observe(el); });
-})();
-
-// Close the More menu when keyboard focus leaves it
-(function(){var nm=document.getElementById('navMore'),nb=document.getElementById('navMoreBtn');if(!nm||!nb)return;nm.addEventListener('focusout',function(e){if(!nm.contains(e.relatedTarget)){nm.classList.remove('open');nb.setAttribute('aria-expanded','false');}});})();
-
-// Hero conversation starter: a tailored opener per visitor type
-(function () {
-  var box = document.getElementById('starter'); if (!box) return;
-  var out = box.querySelector('.starter-out'), M = 'mailto:atindahhillary@gmail.com?subject=';
-  var S = {
-    founder: ['Building something for learners in hard-to-reach places? I design programmes and build the tools behind them, from Enkaji Play to Jamii Learn. Let us pressure-test your idea.', 'Pitch me your idea', M + 'Founder%3A%20'],
-    ceo: ['Need a digital or EdTech programme that stands up to board and funder scrutiny? I build the delivery, the partnerships and the MEAL together, so the results hold.', 'Start the conversation', M + 'CEO%3A%20'],
-    funder: ['Holding a grant for a hard-to-reach region and need a partner who can evidence the outcome? I run programmes on a KES 25M annual budget with weekly partner and monthly donor reporting.', 'Discuss a partnership', M + 'Funder%3A%20'],
-    recruiter: ['Hiring a programme lead for digital transformation, EdTech or AI in education? The CV is one tap away, and I am happy to talk through any role.', 'Download my CV', 'Hillary-Atindah-George-Resume.pdf'],
-    fellowship: ['Selecting leaders for an EdTech, AI or social impact fellowship? Start with the work: an IT Academy for pastoralist youth, 23+ schools, and tools mothers use at home.', 'See the selected work', '#work'],
-    startup: ['Piloting in African schools? I design the pilot, train the teachers and set up the measurement, so your first data is ready for your board.', 'Talk about a pilot', M + 'Startup%3A%20'],
-    curious: ['Welcome. My bot knows the whole profile and answers in seconds. Ask it anything.', 'Ask the bot', '#bot']
-  };
-  box.querySelectorAll('[data-who]').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var s = S[b.dataset.who]; if (!s) return;
-      box.querySelectorAll('[data-who]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
-      out.innerHTML = '';
-      var p = document.createElement('p'); p.textContent = s[0];
-      var a = document.createElement('a'); a.className = 'starter-go'; a.textContent = s[1] + ' \u2192'; a.href = s[2];
-      if (s[2] === 'Hillary-Atindah-George-Resume.pdf') a.setAttribute('download', '');
-      if (s[2] === '#bot') a.addEventListener('click', function (e) { e.preventDefault(); var l = document.getElementById('abotLauncher'); if (l) l.click(); });
-      out.appendChild(p); out.appendChild(a);
-    });
-  });
-})();
-
-// Capability orbit: five labelled pills travel clockwise around the headshot (desktop)
-(function () {
-  var wrap = document.querySelector('.hero-avatar-wrap'), box = wrap && wrap.querySelector('.orbits'); if (!box) return;
-  var pills = [].slice.call(box.querySelectorAll('.orbit')), wide = window.matchMedia('(min-width: 1200px)');
-  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches, angle = -90, last = 0, paused = false, raf = 0;
-  function place() {
-    var W = wrap.clientWidth, H = wrap.clientHeight, cx = W / 2, cy = H / 2;
-    var half = Math.max.apply(null, pills.map(function (p) { return p.offsetWidth / 2; })), hh = pills[0].offsetHeight / 2;
-    var av = wrap.querySelector('.hero-avatar'), R = (av ? av.offsetWidth / 2 : 110) + 12;
-    var rx = R + half + 14, ry = R + hh + 30; // always clear of the photo
-    pills.forEach(function (p, i) {
-      var a = (angle + i * 72) * Math.PI / 180;
-      p.style.transform = 'translate(' + (cx + rx * Math.cos(a) - p.offsetWidth / 2).toFixed(1) + 'px,' + (cy + ry * Math.sin(a) - p.offsetHeight / 2).toFixed(1) + 'px)';
-    });
-  }
-  function tick(t) { if (last && !paused) angle = (angle + (t - last) * 0.006) % 360; last = t; place(); raf = requestAnimationFrame(tick); }
-  function setup() {
-    cancelAnimationFrame(raf); last = 0;
-    if (!wide.matches) { box.classList.remove('is-orbiting'); pills.forEach(function (p) { p.style.transform = ''; }); return; }
-    box.classList.add('is-orbiting'); place();
-    if (!still) raf = requestAnimationFrame(tick);
-  }
-  var btn = wrap.querySelector('.orbit-pause'), held = false;
-  if (btn) btn.addEventListener('click', function () { held = !held; paused = held; btn.setAttribute('aria-pressed', String(held)); btn.textContent = held ? 'Play' : 'Pause'; });
-  wrap.addEventListener('mouseenter', function () { paused = true; });
-  wrap.addEventListener('mouseleave', function () { paused = held; });
-  wrap.addEventListener('focusin', function () { paused = true; });
-  wrap.addEventListener('focusout', function () { paused = held; });
-  document.addEventListener('visibilitychange', function () { last = 0; });
-  (wide.addEventListener ? wide.addEventListener('change', setup) : wide.addListener(setup));
-  window.addEventListener('resize', function () { if (wide.matches) place(); });
-  setup();
 })();
 
 // Offline support: saves the site and the bot so both work without a connection (see sw.js)
